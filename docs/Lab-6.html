@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>PSYC 3400 - Lab 6</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PSYC 3400</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-1.html">
+ <span class="menu-text">Lab 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-2.html">
+ <span class="menu-text">Lab 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-3.html">
+ <span class="menu-text">Lab 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Review-Sheet.html">
+ <span class="menu-text">Exam 1 Review Sheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-4.html">
+ <span class="menu-text">Lab 4</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-5.html">
+ <span class="menu-text">Lab 5</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Lab-6.html" aria-current="page">
+ <span class="menu-text">Lab 6</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-7.html">
+ <span class="menu-text">Lab 7</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Review_Sheet_2.html">
+ <span class="menu-text">Exam 2 Review Sheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-8.html">
+ <span class="menu-text">Lab 8</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-9.html">
+ <span class="menu-text">Lab 9</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-10.html">
+ <span class="menu-text">Lab 10</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-11.html">
+ <span class="menu-text">Lab 11</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-12.html">
+ <span class="menu-text">Lab 12</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Final-Review.html">
+ <span class="menu-text">Final Review Sheet</span></a>
+  </li>  
+</ul>
+<div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#packages" id="toc-packages" class="nav-link active" data-scroll-target="#packages">Packages</a>
+  <ul class="collapse">
+<li><a href="#z-test" id="toc-z-test" class="nav-link" data-scroll-target="#z-test">Z-Test</a></li>
+  <li><a href="#sign-test" id="toc-sign-test" class="nav-link" data-scroll-target="#sign-test">Sign Test</a></li>
+  <li><a href="#matrices-and-dataframes-and-indexing" id="toc-matrices-and-dataframes-and-indexing" class="nav-link" data-scroll-target="#matrices-and-dataframes-and-indexing">Matrices and Dataframes and Indexing</a></li>
+  <li><a href="#apa-style-statistical-reporting" id="toc-apa-style-statistical-reporting" class="nav-link" data-scroll-target="#apa-style-statistical-reporting">APA Style Statistical Reporting</a></li>
+  </ul>
+</li>
+  </ul></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Lab 6</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><div class="cell">
+
+</div>
+<section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>The wonderful thing about R, is that once you know to use it, you can use libraries that process <em>unlimited</em> numbers of statistics. In order to do this, one needs to learn a few commands in order to access these online libraries and use them. With Exercise 06, we introduce the downloading of the <strong>BSDA</strong> package. Within this package comes the functions <code><a href="https://alanarnholt.github.io/BSDA/reference/z.test.html">z.test()</a></code> and <code><a href="https://alanarnholt.github.io/BSDA/reference/SIGN.test.html">SIGN.test()</a></code>.</p>
+<p>First, install the package: <code>install.packages(BSDA)</code></p>
+<p>After installing it on your computer, you can use at anytime you want by telling R to use the package. You do this by:<code><a href="https://github.com/alanarnholt/BSDA">library(BSDA)</a></code></p>
+<section id="z-test" class="level3"><h3 class="anchored" data-anchor-id="z-test">Z-Test</h3>
+<p>In order to compute a Z-Test, you will need a data set. This is a <em>single</em> column of numbers, or in R-Speak, a vector.</p>
+<p>This will be compared against the known population mean <span class="math inline">\(\mu\)</span> <code>(mu)</code> and standard deviation <span class="math inline">\(\sigma\)</span> <code>(sigma.x)</code>.</p>
+<p>The <code><a href="https://alanarnholt.github.io/BSDA/reference/z.test.html">z.test()</a></code> accepts the following arguments:</p>
+<ul>
+<li><p><code>x</code> - a numeric vector</p></li>
+<li><p><code>mu =</code> - A single number representing the mean.</p></li>
+<li><p><code>sigma.x</code> - A single number representing the population standard deviation for <code>x</code>.</p></li>
+<li><p><code>alternative = "two.sided","less","greater"</code> - Specification of the alternative hypothesis.</p></li>
+</ul>
+<p>So, in review, your use of the <code><a href="https://alanarnholt.github.io/BSDA/reference/z.test.html">z.test()</a></code> function should look like this:</p>
+<p><code>z.test(x=, mu=, sigma.x=, alternative = "two.sided")</code></p>
+<section id="z-test-example" class="level4"><h4 class="anchored" data-anchor-id="z-test-example">Z-Test Example</h4>
+<p>In order to perform a Z-Test, you need to have a specified <span class="math inline">\(/sigma\)</span> and <span class="math inline">\(/mu\)</span>.</p>
+<p>In order to find the Standard Error of the mean we need to do the following computation.</p>
+<p><span class="math display">\[\sigma_\bar{x} = \frac{s}{\sqrt{n}}\]</span> We also need to find the mean of the sample:</p>
+<p><span class="math display">\[\bar{x{}} = \frac{\Sigma X}{n}\]</span></p>
+<p>Then we can plug that into the Z formula.</p>
+<p><span class="math display">\[z = \frac{\bar{x}-\mu}{\sigma_x}\]</span></p>
+<p>Let’s use this in an example.</p>
+<p>Dave knows that from his experience working with undergraduate participants on tasks related to attention that the population mean is 71 and the standard deviation is 2.4. He measures the attention scores of 13 participants and finds the following:</p>
+<p><code>71,74,73,71,78,73,72,71,73,72,74,72,75</code></p>
+<ol type="1">
+<li>First, we can find the SEM.</li>
+</ol>
+<p><span class="math display">\[\sigma_x = \frac{2.4}{\sqrt{13}} = .66\]</span></p>
+<ol type="1">
+<li><p>Then we will need to find the mean:</p></li>
+<li><p><span class="math inline">\(Xbar = \frac{71+74+73+71+78+73+72+71+73+72+74+72+75}{13} = 73\)</span></p></li>
+<li><p>We can then plug that into the Z formula:</p></li>
+<li><p><span class="math inline">\(Z_{obt} = \frac{73-71}{.66} = 3.0\)</span></p></li>
+<li><p>Then we can look in the Z-Table(link) for the <span class="math inline">\(Z_{crit}\)</span> of .05 is 1.64.</p></li>
+</ol>
+<p>Because <span class="math inline">\(Z_{obt} &gt; Z_{crit}\)</span>, we can reject the null hypothesis that there is no difference.</p>
+<p>We can write this as:</p>
+<p><span class="math inline">\(Z_{obt}(13) = +3.03 &lt; .05\)</span></p>
+<p>Now we can see how R tackles the same problem.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load in the BSDA Package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/alanarnholt/BSDA">BSDA</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'BSDA'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:datasets':
+
+    Orange</code></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create our sample vector</span></span>
+<span><span class="va">x</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">71</span>,<span class="fl">74</span>,<span class="fl">73</span>,<span class="fl">71</span>,<span class="fl">78</span>,<span class="fl">73</span>,<span class="fl">72</span>,<span class="fl">71</span>,<span class="fl">73</span>,<span class="fl">72</span>,<span class="fl">74</span>,<span class="fl">72</span>,<span class="fl">75</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plug in the numbers</span></span>
+<span><span class="fu"><a href="https://alanarnholt.github.io/BSDA/reference/z.test.html">z.test</a></span><span class="op">(</span><span class="va">x</span>,sigma.x<span class="op">=</span><span class="fl">2.4</span>,alternative<span class="op">=</span><span class="st">"two.sided"</span>, mu<span class="op">=</span><span class="fl">71</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One-sample z-Test
+
+data:  x
+z = 3.0046, p-value = 0.002659
+alternative hypothesis: true mean is not equal to 71
+95 percent confidence interval:
+ 71.69537 74.30463
+sample estimates:
+mean of x 
+       73 </code></pre>
+</div>
+</div>
+<p>The output that is given by the <code><a href="https://alanarnholt.github.io/BSDA/reference/z.test.html">z.test()</a></code> function gives us much more than we need for right now. Note that the Z value is slightly different, this is mainly due to how th computer parses the data. You will also see that this output gives an exact value for p.&nbsp;For right now, stick to indicating if your <span class="math inline">\(Z_{obt}\)</span> is &gt; or &lt; <span class="math inline">\(\alpha{_.05}\)</span>.</p>
+<hr></section></section><section id="sign-test" class="level3"><h3 class="anchored" data-anchor-id="sign-test">Sign Test</h3>
+<p>For the sign test, we will be determining whether or not a difference is due to chance. The sign test uses the number of pluses + and minuses - to determine the strength of an effect. We will be using the <code>BSDA</code> package again, specifically the <code><a href="https://alanarnholt.github.io/BSDA/reference/SIGN.test.html">SIGN.test()</a></code> function.</p>
+<p>The <code><a href="https://alanarnholt.github.io/BSDA/reference/SIGN.test.html">SIGN.test()</a></code> function accepts the following arguments:</p>
+<ul>
+<li><p><code>x</code> - a vector of difference scores</p></li>
+<li><p><code>md =</code> - This is your cut-off point. Unless specified, a common cut-off point is 0. If there was no effect, there would be a difference of 0 between 1 treatment and and another.</p></li>
+<li><p><code>alternative =</code> - Much like the <code>z.test</code>, this can be either <code>two.sided</code>, <code>lesser</code> or <code>greater</code>. You can think of the latter two as being equal to one tailed negative and one tailed positive.</p></li>
+</ul>
+<p>Your full <code><a href="https://alanarnholt.github.io/BSDA/reference/SIGN.test.html">SIGN.test()</a></code>function should look something like this:</p>
+<p><code>SIGN.test(x = , md = , alternative = " ")</code></p>
+<section id="sign-test-example" class="level4"><h4 class="anchored" data-anchor-id="sign-test-example">Sign Test Example</h4>
+<p>A researcher is interested to see whether his students respond perform better on tests when they listen to metal music playing while they study compared to when they study with classical music. He takes 10 students and measures their scores on an exam after they listened to metal music while studying. He then later collects their scores on their tests while they listened to classical music, he then measures the difference. Using an <span class="math inline">\(\alpha\)</span> level of .05, what can he conclude?</p>
+<p>To visualize this, let us create this data.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># To reproduce</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create dataframe</span></span>
+<span><span class="va">music_study</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>    Metal<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">85</span>,<span class="fl">5</span><span class="op">)</span>,digits <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>,</span>
+<span>    Classical<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">78</span>,<span class="fl">8</span><span class="op">)</span>,digits<span class="op">=</span><span class="fl">0</span><span class="op">)</span>,</span>
+<span>    Difference<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"-"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"-"</span>,<span class="st">"+"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">music_study</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Metal Classical Difference
+1     80        72          +
+2     84        69          +
+3     86        72          +
+4     79        80          -
+5     86        79          +
+6     85        76          +
+7     85        70          +
+8     91        73          +
+9     79        88          -
+10    91        80          +</code></pre>
+</div>
+</div>
+<p>We cannot do any analyses on character data right now, so let’s make sure to convert those values to numbers just so we can see.</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># To reproduce</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">music_study</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>    Metal<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">85</span>,<span class="fl">5</span><span class="op">)</span>,digits <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>,</span>
+<span>    Classical<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">78</span>,<span class="fl">8</span><span class="op">)</span>,digits<span class="op">=</span><span class="fl">0</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Once the dataframe is created, you can add additional columns</span></span>
+<span><span class="va">music_study</span><span class="op">$</span><span class="va">Diff</span> <span class="op">=</span> <span class="va">music_study</span><span class="op">$</span><span class="va">Metal</span><span class="op">-</span><span class="va">music_study</span><span class="op">$</span><span class="va">Classical</span></span>
+<span><span class="va">music_study</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Metal Classical Diff
+1     80        72    8
+2     84        69   15
+3     86        72   14
+4     79        80   -1
+5     86        79    7
+6     85        76    9
+7     85        70   15
+8     91        73   18
+9     79        88   -9
+10    91        80   11</code></pre>
+</div>
+</div>
+<p>So we have two minuses and 8 pluses. What is the probability associated with this outcome with a sample of 10? In other words, think of this as <span class="math inline">\(p(8)\)</span> which necessarily includes <span class="math inline">\(p(9)\)</span> and <span class="math inline">\(p(10)\)</span>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/alanarnholt/BSDA">BSDA</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://alanarnholt.github.io/BSDA/reference/SIGN.test.html">SIGN.test</a></span><span class="op">(</span><span class="va">music_study</span><span class="op">$</span><span class="va">Diff</span>,alternative <span class="op">=</span> <span class="st">"greater"</span>, md<span class="op">=</span><span class="fl">0</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    One-sample Sign-Test
+
+data:  music_study$Diff
+s = 8, p-value = 0.05469
+alternative hypothesis: true median is greater than 0
+95 percent confidence interval:
+ 6.146667      Inf
+sample estimates:
+median of x 
+         10 
+
+Achieved and Interpolated Confidence Intervals: 
+
+                  Conf.Level  L.E.pt U.E.pt
+Lower Achieved CI     0.9453  7.0000    Inf
+Interpolated CI       0.9500  6.1467    Inf
+Upper Achieved CI     0.9893 -1.0000    Inf</code></pre>
+</div>
+</div>
+<p>The researcher can conclude that there appears to be no significant difference in test results from students who listen to metal music while studying compared to students who listened to classical music while studying.</p>
+<p>We can see from the output that we are <em>just</em> shy of being significant. It will be good practice to be rather dichotomous, much like the sign test in saying you are either below your <span class="math inline">\(\alpha\)</span> level, or above it.</p>
+<p>Now, let’s go backwards a bit: When we calculated a z-test, we did it by “hand” and then by computer. Now let us perform the same sign test by “hand”.</p>
+<p>All we need to know is that we ended up with 8 pluses (+) and two minuses (-).</p>
+<p>We can look at the binomial table, in the column for .50 where n = 10.</p>
+<p>We will need to add the probabilities of <span class="math inline">\(p(8)\)</span>,<span class="math inline">\(p(9)\)</span>, and <span class="math inline">\(p(10)\)</span> to get our answer:</p>
+<p><span class="math display">\[p(8)+p(9)+p(10) = .0439 + .0098 + .0010 + = .0547 \]</span></p>
+</section></section><section id="matrices-and-dataframes-and-indexing" class="level3"><h3 class="anchored" data-anchor-id="matrices-and-dataframes-and-indexing">Matrices and Dataframes and Indexing</h3>
+<p>We have learned about vectors and dataframees. We will now learn about matrices.</p>
+<section id="vector" class="level5"><h5 class="anchored" data-anchor-id="vector">Vector</h5>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4 5</code></pre>
+</div>
+</div>
+</section><section id="dataframe" class="level5"><h5 class="anchored" data-anchor-id="dataframe">Dataframe</h5>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
+<span><span class="va">y</span><span class="op">=</span><span class="va">x</span></span>
+<span><span class="va">xy</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span><span class="op">)</span></span>
+<span><span class="va">xy</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    x  y
+1   1  1
+2   2  2
+3   3  3
+4   4  4
+5   5  5
+6   6  6
+7   7  7
+8   8  8
+9   9  9
+10 10 10</code></pre>
+</div>
+</div>
+</section><section id="matrices" class="level5"><h5 class="anchored" data-anchor-id="matrices">Matrices</h5>
+<p>When creating a matrix, you can define your number of columns and number of rows through the use of</p>
+<p><code>nrow=</code> and <code>ncol=</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,y<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">120</span>,<span class="fl">130</span>,<span class="fl">131</span>,<span class="fl">144</span>,<span class="fl">100</span><span class="op">)</span><span class="op">)</span>,nrow <span class="op">=</span> <span class="fl">5</span>,ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]    1  120
+[2,]    2  130
+[3,]    3  131
+[4,]    4  144
+[5,]    5  100</code></pre>
+</div>
+</div>
+<p>Once you have a matrix you can refer to a specific data point using <code>[,]</code>. The way this works is that anything inside of the left bracket (<code>[</code>) will refer to the row. Anything inside of the right bracket (<code>]</code>) will refer to the column.</p>
+<p>Let’s try it out.</p>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmat</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,y<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">120</span>,<span class="fl">130</span>,<span class="fl">131</span>,<span class="fl">144</span>,<span class="fl">100</span><span class="op">)</span><span class="op">)</span>,nrow <span class="op">=</span> <span class="fl">5</span>,ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="va">xmat</span><span class="op">[</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmat</span><span class="op">[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 130</code></pre>
+</div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmat</span><span class="op">[</span><span class="fl">2</span>,<span class="fl">1</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmat</span><span class="op">[</span><span class="fl">4</span>,<span class="fl">2</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 144</code></pre>
+</div>
+</div>
+</section></section><section id="apa-style-statistical-reporting" class="level3"><h3 class="anchored" data-anchor-id="apa-style-statistical-reporting">APA Style Statistical Reporting</h3>
+<p>So far in this class, we have looked at datasets, and performed analyses. The next step is to report these findings.</p>
+<p>All of psychology uses APA style writing. Within this writing style there is a special style to report results.</p>
+<p>From this point forward, on your homework if you do any analyses and are asked to report your findings, you <em>must</em> use proper statistical formatting in order to get all of the points.</p>
+<p>The Z-Test deals with significance, as does the Sign Test.</p>
+<p>In most cases, you will be reporting as follows:</p>
+<p>You will be reporting probabilities.</p>
+<p><em>p = ns</em></p>
+<p>or</p>
+<p><em>p = .004</em></p>
+<ul>
+<li>Z-Test: <span class="math inline">\(Z_{obt}(n) = (+/-)Score &gt; &lt; = \alpha\)</span>
+</li>
+<li>Sign Test: <span class="math inline">\(p = .four places\)</span>
+</li>
+</ul>
+
+
+<!-- -->
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb27" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Lab 6'</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="in">```{r global_options,echo=FALSE}</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.width=</span><span class="dv">12</span>, <span class="at">fig.height=</span><span class="dv">8</span>, <span class="at">comment=</span><span class="cn">NA</span>,<span class="at">warning =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Packages</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>The wonderful thing about R, is that once you know to use it, you can use libraries that process *unlimited* numbers of statistics. In order to do this, one needs to learn a few commands in order to access these online libraries and use them. With Exercise 06, we introduce the downloading of the **BSDA** package. Within this package comes the functions <span class="in">`z.test()`</span> and <span class="in">`SIGN.test()`</span>.</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>First, install the package: <span class="in">`install.packages(BSDA)`</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>After installing it on your computer, you can use at anytime you want by telling R to use the package. You do this by:<span class="in">`library(BSDA)`</span></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### Z-Test</span></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>In order to compute a Z-Test, you will need a data set. This is a *single* column of numbers, or in R-Speak, a vector.</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>This will be compared against the known population mean $\mu$ <span class="in">`(mu)`</span> and standard deviation $\sigma$ <span class="in">`(sigma.x)`</span>.</span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>The <span class="in">`z.test()`</span> accepts the following arguments:</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`x`</span> - a numeric vector</span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mu =`</span> - A single number representing the mean.</span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`sigma.x`</span> - A single number representing the population standard deviation for <span class="in">`x`</span>.</span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`alternative = "two.sided","less","greater"`</span> - Specification of the alternative hypothesis.</span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a>So, in review, your use of the <span class="in">`z.test()`</span> function should look like this:</span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a><span class="in">`z.test(x=, mu=, sigma.x=, alternative = "two.sided")`</span></span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Z-Test Example</span></span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a>In order to perform a Z-Test, you need to have a specified $/sigma$ and $/mu$.</span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>In order to find the Standard Error of the mean we need to do the following computation.</span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>$$\sigma_\bar{x} = \frac{s}{\sqrt{n}}$$ We also need to find the mean of the sample:</span>
+<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-46"><a href="#cb27-46" aria-hidden="true" tabindex="-1"></a>$$\bar{x{}} = \frac{\Sigma X}{n}$$</span>
+<span id="cb27-47"><a href="#cb27-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-48"><a href="#cb27-48" aria-hidden="true" tabindex="-1"></a>Then we can plug that into the Z formula.</span>
+<span id="cb27-49"><a href="#cb27-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-50"><a href="#cb27-50" aria-hidden="true" tabindex="-1"></a>$$z = \frac{\bar{x}-\mu}{\sigma_x}$$</span>
+<span id="cb27-51"><a href="#cb27-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-52"><a href="#cb27-52" aria-hidden="true" tabindex="-1"></a>Let's use this in an example.</span>
+<span id="cb27-53"><a href="#cb27-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a>Dave knows that from his experience working with undergraduate participants on tasks related to attention that the population mean is 71 and the standard deviation is 2.4. He measures the attention scores of 13 participants and finds the following:</span>
+<span id="cb27-55"><a href="#cb27-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-56"><a href="#cb27-56" aria-hidden="true" tabindex="-1"></a><span class="in">`71,74,73,71,78,73,72,71,73,72,74,72,75`</span></span>
+<span id="cb27-57"><a href="#cb27-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-58"><a href="#cb27-58" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>First, we can find the SEM.</span>
+<span id="cb27-59"><a href="#cb27-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-60"><a href="#cb27-60" aria-hidden="true" tabindex="-1"></a>$$\sigma_x = \frac{2.4}{\sqrt{13}} = .66$$</span>
+<span id="cb27-61"><a href="#cb27-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-62"><a href="#cb27-62" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Then we will need to find the mean:</span>
+<span id="cb27-63"><a href="#cb27-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>$Xbar = \frac{71+74+73+71+78+73+72+71+73+72+74+72+75}{13} = 73$</span>
+<span id="cb27-65"><a href="#cb27-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-66"><a href="#cb27-66" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>We can then plug that into the Z formula:</span>
+<span id="cb27-67"><a href="#cb27-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-68"><a href="#cb27-68" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>$Z_{obt} = \frac{73-71}{.66} = 3.0$</span>
+<span id="cb27-69"><a href="#cb27-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-70"><a href="#cb27-70" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Then we can look in the Z-Table(link) for the $Z_{crit}$ of .05 is 1.64.</span>
+<span id="cb27-71"><a href="#cb27-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-72"><a href="#cb27-72" aria-hidden="true" tabindex="-1"></a>Because $Z_{obt} &gt; Z_{crit}$, we can reject the null hypothesis that there is no difference.</span>
+<span id="cb27-73"><a href="#cb27-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-74"><a href="#cb27-74" aria-hidden="true" tabindex="-1"></a>We can write this as:</span>
+<span id="cb27-75"><a href="#cb27-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-76"><a href="#cb27-76" aria-hidden="true" tabindex="-1"></a>$Z_{obt}(13) = +3.03 &lt; .05$</span>
+<span id="cb27-77"><a href="#cb27-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-78"><a href="#cb27-78" aria-hidden="true" tabindex="-1"></a>Now we can see how R tackles the same problem.</span>
+<span id="cb27-79"><a href="#cb27-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-82"><a href="#cb27-82" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-83"><a href="#cb27-83" aria-hidden="true" tabindex="-1"></a><span class="co"># Load in the BSDA Package</span></span>
+<span id="cb27-84"><a href="#cb27-84" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BSDA)</span>
+<span id="cb27-85"><a href="#cb27-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-86"><a href="#cb27-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Create our sample vector</span></span>
+<span id="cb27-87"><a href="#cb27-87" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">c</span>(<span class="dv">71</span>,<span class="dv">74</span>,<span class="dv">73</span>,<span class="dv">71</span>,<span class="dv">78</span>,<span class="dv">73</span>,<span class="dv">72</span>,<span class="dv">71</span>,<span class="dv">73</span>,<span class="dv">72</span>,<span class="dv">74</span>,<span class="dv">72</span>,<span class="dv">75</span>)</span>
+<span id="cb27-88"><a href="#cb27-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-89"><a href="#cb27-89" aria-hidden="true" tabindex="-1"></a><span class="co"># Plug in the numbers</span></span>
+<span id="cb27-90"><a href="#cb27-90" aria-hidden="true" tabindex="-1"></a><span class="fu">z.test</span>(x,<span class="at">sigma.x=</span><span class="fl">2.4</span>,<span class="at">alternative=</span><span class="st">"two.sided"</span>, <span class="at">mu=</span><span class="dv">71</span>)</span>
+<span id="cb27-91"><a href="#cb27-91" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-92"><a href="#cb27-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-93"><a href="#cb27-93" aria-hidden="true" tabindex="-1"></a>The output that is given by the <span class="in">`z.test()`</span> function gives us much more than we need for right now. Note that the Z value is slightly different, this is mainly due to how th computer parses the data. You will also see that this output gives an exact value for p. For right now, stick to indicating if your $Z_{obt}$ is <span class="sc">\&gt;</span> or <span class="sc">\&lt;</span> $\alpha{_.05}$.</span>
+<span id="cb27-94"><a href="#cb27-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-95"><a href="#cb27-95" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb27-96"><a href="#cb27-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-97"><a href="#cb27-97" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sign Test</span></span>
+<span id="cb27-98"><a href="#cb27-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-99"><a href="#cb27-99" aria-hidden="true" tabindex="-1"></a>For the sign test, we will be determining whether or not a difference is due to chance. The sign test uses the number of pluses + and minuses - to determine the strength of an effect. We will be using the <span class="in">`BSDA`</span> package again, specifically the <span class="in">`SIGN.test()`</span> function.</span>
+<span id="cb27-100"><a href="#cb27-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-101"><a href="#cb27-101" aria-hidden="true" tabindex="-1"></a>The <span class="in">`SIGN.test()`</span> function accepts the following arguments:</span>
+<span id="cb27-102"><a href="#cb27-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-103"><a href="#cb27-103" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`x`</span> - a vector of difference scores</span>
+<span id="cb27-104"><a href="#cb27-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-105"><a href="#cb27-105" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`md =`</span> - This is your cut-off point. Unless specified, a common cut-off point is 0. If there was no effect, there would be a difference of 0 between 1 treatment and and another.</span>
+<span id="cb27-106"><a href="#cb27-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-107"><a href="#cb27-107" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`alternative =`</span> - Much like the <span class="in">`z.test`</span>, this can be either <span class="in">`two.sided`</span>, <span class="in">`lesser`</span> or <span class="in">`greater`</span>. You can think of the latter two as being equal to one tailed negative and one tailed positive.</span>
+<span id="cb27-108"><a href="#cb27-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-109"><a href="#cb27-109" aria-hidden="true" tabindex="-1"></a>Your full <span class="in">`SIGN.test()`</span>function should look something like this:</span>
+<span id="cb27-110"><a href="#cb27-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-111"><a href="#cb27-111" aria-hidden="true" tabindex="-1"></a><span class="in">`SIGN.test(x = , md = , alternative = " ")`</span></span>
+<span id="cb27-112"><a href="#cb27-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-113"><a href="#cb27-113" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Sign Test Example</span></span>
+<span id="cb27-114"><a href="#cb27-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-115"><a href="#cb27-115" aria-hidden="true" tabindex="-1"></a>A researcher is interested to see whether his students respond perform better on tests when they listen to metal music playing while they study compared to when they study with classical music. He takes 10 students and measures their scores on an exam after they listened to metal music while studying. He then later collects their scores on their tests while they listened to classical music, he then measures the difference. Using an $\alpha$ level of .05, what can he conclude?</span>
+<span id="cb27-116"><a href="#cb27-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-117"><a href="#cb27-117" aria-hidden="true" tabindex="-1"></a>To visualize this, let us create this data.</span>
+<span id="cb27-118"><a href="#cb27-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-121"><a href="#cb27-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-122"><a href="#cb27-122" aria-hidden="true" tabindex="-1"></a><span class="co"># To reproduce</span></span>
+<span id="cb27-123"><a href="#cb27-123" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>)</span>
+<span id="cb27-124"><a href="#cb27-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-125"><a href="#cb27-125" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe</span></span>
+<span id="cb27-126"><a href="#cb27-126" aria-hidden="true" tabindex="-1"></a>music_study <span class="ot">&lt;-</span></span>
+<span id="cb27-127"><a href="#cb27-127" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb27-128"><a href="#cb27-128" aria-hidden="true" tabindex="-1"></a>    <span class="at">Metal=</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>,<span class="dv">85</span>,<span class="dv">5</span>),<span class="at">digits =</span> <span class="dv">0</span>),</span>
+<span id="cb27-129"><a href="#cb27-129" aria-hidden="true" tabindex="-1"></a>    <span class="at">Classical=</span><span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>,<span class="dv">78</span>,<span class="dv">8</span>),<span class="at">digits=</span><span class="dv">0</span>),</span>
+<span id="cb27-130"><a href="#cb27-130" aria-hidden="true" tabindex="-1"></a>    <span class="at">Difference=</span><span class="fu">c</span>(<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"-"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"+"</span>,<span class="st">"-"</span>,<span class="st">"+"</span>))</span>
+<span id="cb27-131"><a href="#cb27-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-132"><a href="#cb27-132" aria-hidden="true" tabindex="-1"></a>music_study</span>
+<span id="cb27-133"><a href="#cb27-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-134"><a href="#cb27-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-135"><a href="#cb27-135" aria-hidden="true" tabindex="-1"></a>We cannot do any analyses on character data right now, so let's make sure to convert those values to numbers just so we can see.</span>
+<span id="cb27-136"><a href="#cb27-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-139"><a href="#cb27-139" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-140"><a href="#cb27-140" aria-hidden="true" tabindex="-1"></a><span class="co"># To reproduce</span></span>
+<span id="cb27-141"><a href="#cb27-141" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>)</span>
+<span id="cb27-142"><a href="#cb27-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-143"><a href="#cb27-143" aria-hidden="true" tabindex="-1"></a>music_study <span class="ot">&lt;-</span> </span>
+<span id="cb27-144"><a href="#cb27-144" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb27-145"><a href="#cb27-145" aria-hidden="true" tabindex="-1"></a>    <span class="at">Metal=</span><span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>,<span class="dv">85</span>,<span class="dv">5</span>),<span class="at">digits =</span> <span class="dv">0</span>),</span>
+<span id="cb27-146"><a href="#cb27-146" aria-hidden="true" tabindex="-1"></a>    <span class="at">Classical=</span><span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10</span>,<span class="dv">78</span>,<span class="dv">8</span>),<span class="at">digits=</span><span class="dv">0</span>)</span>
+<span id="cb27-147"><a href="#cb27-147" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb27-148"><a href="#cb27-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-149"><a href="#cb27-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Once the dataframe is created, you can add additional columns</span></span>
+<span id="cb27-150"><a href="#cb27-150" aria-hidden="true" tabindex="-1"></a>music_study<span class="sc">$</span>Diff <span class="ot">=</span> music_study<span class="sc">$</span>Metal<span class="sc">-</span>music_study<span class="sc">$</span>Classical</span>
+<span id="cb27-151"><a href="#cb27-151" aria-hidden="true" tabindex="-1"></a>music_study</span>
+<span id="cb27-152"><a href="#cb27-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-153"><a href="#cb27-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-154"><a href="#cb27-154" aria-hidden="true" tabindex="-1"></a>So we have two minuses and 8 pluses. What is the probability associated with this outcome with a sample of 10? In other words, think of this as $p(8)$ which necessarily includes $p(9)$ and $p(10)$.</span>
+<span id="cb27-155"><a href="#cb27-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-158"><a href="#cb27-158" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-159"><a href="#cb27-159" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BSDA)</span>
+<span id="cb27-160"><a href="#cb27-160" aria-hidden="true" tabindex="-1"></a><span class="fu">SIGN.test</span>(music_study<span class="sc">$</span>Diff,<span class="at">alternative =</span> <span class="st">"greater"</span>, <span class="at">md=</span><span class="dv">0</span>)</span>
+<span id="cb27-161"><a href="#cb27-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-162"><a href="#cb27-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-163"><a href="#cb27-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-164"><a href="#cb27-164" aria-hidden="true" tabindex="-1"></a>The researcher can conclude that there appears to be no significant difference in test results from students who listen to metal music while studying compared to students who listened to classical music while studying.</span>
+<span id="cb27-165"><a href="#cb27-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-166"><a href="#cb27-166" aria-hidden="true" tabindex="-1"></a>We can see from the output that we are *just* shy of being significant. It will be good practice to be rather dichotomous, much like the sign test in saying you are either below your $\alpha$ level, or above it.</span>
+<span id="cb27-167"><a href="#cb27-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-168"><a href="#cb27-168" aria-hidden="true" tabindex="-1"></a>Now, let's go backwards a bit: When we calculated a z-test, we did it by "hand" and then by computer. Now let us perform the same sign test by "hand".</span>
+<span id="cb27-169"><a href="#cb27-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-170"><a href="#cb27-170" aria-hidden="true" tabindex="-1"></a>All we need to know is that we ended up with 8 pluses (+) and two minuses (-).</span>
+<span id="cb27-171"><a href="#cb27-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-172"><a href="#cb27-172" aria-hidden="true" tabindex="-1"></a>We can look at the binomial table, in the column for .50 where n = 10.</span>
+<span id="cb27-173"><a href="#cb27-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-174"><a href="#cb27-174" aria-hidden="true" tabindex="-1"></a>We will need to add the probabilities of $p(8)$,$p(9)$, and $p(10)$ to get our answer:</span>
+<span id="cb27-175"><a href="#cb27-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-176"><a href="#cb27-176" aria-hidden="true" tabindex="-1"></a>$$p(8)+p(9)+p(10) = .0439 + .0098 + .0010 + = .0547 $$</span>
+<span id="cb27-177"><a href="#cb27-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-178"><a href="#cb27-178" aria-hidden="true" tabindex="-1"></a><span class="fu">### Matrices and Dataframes and Indexing</span></span>
+<span id="cb27-179"><a href="#cb27-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-180"><a href="#cb27-180" aria-hidden="true" tabindex="-1"></a>We have learned about vectors and dataframees. We will now learn about matrices.</span>
+<span id="cb27-181"><a href="#cb27-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-182"><a href="#cb27-182" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Vector</span></span>
+<span id="cb27-183"><a href="#cb27-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-186"><a href="#cb27-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-187"><a href="#cb27-187" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb27-188"><a href="#cb27-188" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb27-189"><a href="#cb27-189" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-190"><a href="#cb27-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-191"><a href="#cb27-191" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Dataframe</span></span>
+<span id="cb27-192"><a href="#cb27-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-195"><a href="#cb27-195" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-196"><a href="#cb27-196" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb27-197"><a href="#cb27-197" aria-hidden="true" tabindex="-1"></a>y<span class="ot">=</span>x</span>
+<span id="cb27-198"><a href="#cb27-198" aria-hidden="true" tabindex="-1"></a>xy<span class="ot">&lt;-</span><span class="fu">data.frame</span>(x,y)</span>
+<span id="cb27-199"><a href="#cb27-199" aria-hidden="true" tabindex="-1"></a>xy</span>
+<span id="cb27-200"><a href="#cb27-200" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-201"><a href="#cb27-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-202"><a href="#cb27-202" aria-hidden="true" tabindex="-1"></a><span class="fu">##### Matrices</span></span>
+<span id="cb27-203"><a href="#cb27-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-204"><a href="#cb27-204" aria-hidden="true" tabindex="-1"></a>When creating a matrix, you can define your number of columns and number of rows through the use of</span>
+<span id="cb27-205"><a href="#cb27-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-206"><a href="#cb27-206" aria-hidden="true" tabindex="-1"></a><span class="in">`nrow=`</span> and <span class="in">`ncol=`</span>.</span>
+<span id="cb27-207"><a href="#cb27-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-210"><a href="#cb27-210" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-211"><a href="#cb27-211" aria-hidden="true" tabindex="-1"></a><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="at">y=</span><span class="fu">c</span>(<span class="dv">120</span>,<span class="dv">130</span>,<span class="dv">131</span>,<span class="dv">144</span>,<span class="dv">100</span>)),<span class="at">nrow =</span> <span class="dv">5</span>,<span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb27-212"><a href="#cb27-212" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-213"><a href="#cb27-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-214"><a href="#cb27-214" aria-hidden="true" tabindex="-1"></a>Once you have a matrix you can refer to a specific data point using <span class="in">`[,]`</span>. The way this works is that anything inside of the left bracket (<span class="in">`[`</span>) will refer to the row. Anything inside of the right bracket (<span class="in">`]`</span>) will refer to the column.</span>
+<span id="cb27-215"><a href="#cb27-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-216"><a href="#cb27-216" aria-hidden="true" tabindex="-1"></a>Let's try it out.</span>
+<span id="cb27-217"><a href="#cb27-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-220"><a href="#cb27-220" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb27-221"><a href="#cb27-221" aria-hidden="true" tabindex="-1"></a>xmat<span class="ot">=</span><span class="fu">matrix</span>(<span class="fu">c</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="at">y=</span><span class="fu">c</span>(<span class="dv">120</span>,<span class="dv">130</span>,<span class="dv">131</span>,<span class="dv">144</span>,<span class="dv">100</span>)),<span class="at">nrow =</span> <span class="dv">5</span>,<span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb27-222"><a href="#cb27-222" aria-hidden="true" tabindex="-1"></a>xmat[<span class="dv">1</span>,<span class="dv">1</span>]</span>
+<span id="cb27-223"><a href="#cb27-223" aria-hidden="true" tabindex="-1"></a>xmat[<span class="dv">2</span>,<span class="dv">2</span>]</span>
+<span id="cb27-224"><a href="#cb27-224" aria-hidden="true" tabindex="-1"></a>xmat[<span class="dv">2</span>,<span class="dv">1</span>]</span>
+<span id="cb27-225"><a href="#cb27-225" aria-hidden="true" tabindex="-1"></a>xmat[<span class="dv">4</span>,<span class="dv">2</span>]</span>
+<span id="cb27-226"><a href="#cb27-226" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb27-227"><a href="#cb27-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-228"><a href="#cb27-228" aria-hidden="true" tabindex="-1"></a><span class="fu">### APA Style Statistical Reporting</span></span>
+<span id="cb27-229"><a href="#cb27-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-230"><a href="#cb27-230" aria-hidden="true" tabindex="-1"></a>So far in this class, we have looked at datasets, and performed analyses. The next step is to report these findings.</span>
+<span id="cb27-231"><a href="#cb27-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-232"><a href="#cb27-232" aria-hidden="true" tabindex="-1"></a>All of psychology uses APA style writing. Within this writing style there is a special style to report results.</span>
+<span id="cb27-233"><a href="#cb27-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-234"><a href="#cb27-234" aria-hidden="true" tabindex="-1"></a>From this point forward, on your homework if you do any analyses and are asked to report your findings, you *must* use proper statistical formatting in order to get all of the points.</span>
+<span id="cb27-235"><a href="#cb27-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-236"><a href="#cb27-236" aria-hidden="true" tabindex="-1"></a>The Z-Test deals with significance, as does the Sign Test.</span>
+<span id="cb27-237"><a href="#cb27-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-238"><a href="#cb27-238" aria-hidden="true" tabindex="-1"></a>In most cases, you will be reporting as follows:</span>
+<span id="cb27-239"><a href="#cb27-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-240"><a href="#cb27-240" aria-hidden="true" tabindex="-1"></a>You will be reporting probabilities.</span>
+<span id="cb27-241"><a href="#cb27-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-242"><a href="#cb27-242" aria-hidden="true" tabindex="-1"></a>*p = ns*</span>
+<span id="cb27-243"><a href="#cb27-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-244"><a href="#cb27-244" aria-hidden="true" tabindex="-1"></a>or</span>
+<span id="cb27-245"><a href="#cb27-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-246"><a href="#cb27-246" aria-hidden="true" tabindex="-1"></a>*p = .004*</span>
+<span id="cb27-247"><a href="#cb27-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-248"><a href="#cb27-248" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Z-Test: $Z_{obt}(n) = (+/-)Score &gt; &lt; = \alpha$</span>
+<span id="cb27-249"><a href="#cb27-249" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Sign Test: $p = .four places$</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>

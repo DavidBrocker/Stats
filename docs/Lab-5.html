@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>PSYC 3400 - Lab 5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PSYC 3400</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-1.html">
+ <span class="menu-text">Lab 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-2.html">
+ <span class="menu-text">Lab 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-3.html">
+ <span class="menu-text">Lab 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Review-Sheet.html">
+ <span class="menu-text">Exam 1 Review Sheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-4.html">
+ <span class="menu-text">Lab 4</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Lab-5.html" aria-current="page">
+ <span class="menu-text">Lab 5</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-6.html">
+ <span class="menu-text">Lab 6</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-7.html">
+ <span class="menu-text">Lab 7</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Review_Sheet_2.html">
+ <span class="menu-text">Exam 2 Review Sheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-8.html">
+ <span class="menu-text">Lab 8</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-9.html">
+ <span class="menu-text">Lab 9</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-10.html">
+ <span class="menu-text">Lab 10</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-11.html">
+ <span class="menu-text">Lab 11</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-12.html">
+ <span class="menu-text">Lab 12</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Final-Review.html">
+ <span class="menu-text">Final Review Sheet</span></a>
+  </li>  
+</ul>
+<div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#probability" id="toc-probability" class="nav-link active" data-scroll-target="#probability">Probability</a></li>
+  <li>
+<a href="#proportioning-data" id="toc-proportioning-data" class="nav-link" data-scroll-target="#proportioning-data">Proportioning Data</a>
+  <ul class="collapse">
+<li><a href="#rnorm" id="toc-rnorm" class="nav-link" data-scroll-target="#rnorm"><code>rnorm()</code></a></li>
+  <li><a href="#sampling" id="toc-sampling" class="nav-link" data-scroll-target="#sampling">Sampling</a></li>
+  </ul>
+</li>
+  </ul></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Lab 5</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><div class="cell">
+
+</div>
+<p><br></p>
+<section id="probability" class="level3"><h3 class="anchored" data-anchor-id="probability">Probability</h3>
+<p><br></p>
+<p>Before we can talk about inferential satistics we have to understand probability.</p>
+<p>We all know, that if I toss a quarter in the air. There are only two possible options. Either the coin lands on heads, or it lands on tails.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">coin</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"head"</span>,<span class="st">"tails"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">coin</span>,<span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "head"</code></pre>
+</div>
+</div>
+<p>By using the <code><a href="https://rdrr.io/r/base/sample.html">sample()</a></code> function, we can tell R to randomly sample an event for us.</p>
+<p>We ‘tossed’ a coin, and it landed on heads. What is the probability of this happening?</p>
+<p>Probability is written as:</p>
+<p><span class="math display">\[P(A) = \frac{1}{2} = .5000\]</span></p>
+<p>In other words, the number of possible outcomes favorable to A divided by the total number of possible outcomes.</p>
+<p>Let’s think about this in terms of playing cards:</p>
+<p>In a standard card deck, there are 52 total cards:</p>
+<ul>
+<li>Two Colors: Red and Black</li>
+<li>Four Suits: Clubs, Hearts, Spades, Diamonds</li>
+<li>Card Values: 2,3,4,5,6,7,8,9,10,J,Q,K,A</li>
+</ul>
+<p>What is the probability of picking a King of Hearts</p>
+<p><span class="math display">\[P(King of Hearts) = \frac{1}{52}= .0192\]</span></p>
+<p>What is the probability of picking a 10 of Hearts and a Nine of Hearts with replacement?</p>
+<p><span class="math display">\[P(10 of Hearts) - P(9 of Hearts) \frac{1}{52}X \frac{1}{52} = .01923X .01923 = .00037\]</span> What is the probability of picking a 10 of Hearts and a Nine of Hearts without replacement?</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Ten_of_Hearts</span> <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="fl">52</span></span>
+<span><span class="va">Ten_of_Hearts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01923077</code></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Nine_of_Hearts</span> <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="fl">52</span></span>
+<span><span class="va">Ten_of_Hearts</span><span class="op">*</span><span class="va">Nine_of_Hearts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0003698225</code></pre>
+</div>
+</div>
+<p><span class="math display">\[P(10 of Hearts) - P(9 of Hearts) \frac{1}{52}X \frac{1}{51} = .01923X .01961 = .00037\]</span></p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Ten_of_Hearts</span> <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="fl">52</span></span>
+<span><span class="va">Ten_of_Hearts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01923077</code></pre>
+</div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Nine_of_Hearts</span> <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="fl">51</span></span>
+<span><span class="va">Nine_of_Hearts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.01960784</code></pre>
+</div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Ten_of_Hearts</span><span class="op">*</span><span class="va">Nine_of_Hearts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0003770739</code></pre>
+</div>
+</div>
+<p>In order to do work with some datasets, we need to know what they are composed of. So far we have many worked with numbers. If we were to look at string data. Also know as, character data, we can use a new command named <code><a href="https://rdrr.io/r/base/which.html">which()</a></code>. Additionally we can also use a workaround using something new: <code>==</code>. A single <code>=</code> is an assignment operator.</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">myname</span> <span class="op">=</span> <span class="st">"David"</span></span>
+<span><span class="va">myname</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "David"</code></pre>
+</div>
+</div>
+<p>Two <code>==</code> represents a comparative operator. In other words, <code>==</code> assesses whether one variable is the exact same as another:</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># The variable 'myname' is equal to David so this returns TRUE</span></span>
+<span><span class="va">myname</span> <span class="op">==</span> <span class="st">"David"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># It is NOT equal to 'Gaby' so it returns false</span></span>
+<span><span class="va">myname</span> <span class="op">==</span> <span class="st">"Gaby"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># As an added reference point != negates the comparison operator</span></span>
+<span><span class="va">myname</span> <span class="op">!=</span> <span class="st">"Gaby"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>There are two different ways we can break-up our data.</p>
+<p>We can use a command such as:</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span></span>
+<span><span class="co"># Create my datset</span></span>
+<span><span class="va">z</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>,<span class="fl">30</span>,<span class="fl">14</span>,<span class="fl">80</span>,<span class="fl">91</span>,<span class="fl">10</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># Return the length of Z when "10" is present.</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">z</span> <span class="op">==</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Return the length of Z when a score is less than `&lt;`91</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">z</span><span class="op">&lt;</span><span class="fl">91</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Return the length of Z when a score is less than `&lt;`</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">z</span><span class="op">&gt;</span><span class="fl">91</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+</section><section id="proportioning-data" class="level2"><h2 class="anchored" data-anchor-id="proportioning-data">Proportioning Data</h2>
+<p>The below code will allow you to take a set of data and see what proportion is accounted for given a certain criteria.</p>
+<p>For example: If I have a data set of 1’s and 0’s, how can I know how many I have of each. Additionally, how can I tell the proportion of each?</p>
+<p>To do this we need to use the <code><a href="https://rdrr.io/r/base/which.html">which()</a></code>command as well as how much of the data is made up of 1’s and 0’s.</p>
+<div class="cell">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create the dataset</span></span>
+<span><span class="va">x</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">1</span>,<span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0 0 0 0 1 1 0 0 1 1 1 1 0 0 1 0 1 0 1 0 1 1 1 0 1 0 1</code></pre>
+</div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">one</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">x</span><span class="op">==</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">one</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 14</code></pre>
+</div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">zero</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">x</span><span class="op">==</span><span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">zero</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13</code></pre>
+</div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 27</code></pre>
+</div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">one</span> <span class="op">+</span> <span class="va">zero</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 27</code></pre>
+</div>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">one</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5185185</code></pre>
+</div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">zero</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.4814815</code></pre>
+</div>
+</div>
+<p>We can see here that the amount of 1’s is quite close to the amount of 0’s. Now let us try with a more involved example.</p>
+<div class="cell">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Make a dataset of differnt colored marbles</span></span>
+<span><span class="va">d</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>,<span class="st">"red"</span>, <span class="st">"blue"</span>,<span class="st">"orange"</span>, <span class="st">"orange"</span>,<span class="st">"orange"</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># Repeat this arrangement 20 times</span></span>
+<span><span class="va">x</span><span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="va">d</span>,<span class="fl">20</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># What is the length of x that contains "red"</span></span>
+<span><span class="va">rl</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="va">x</span><span class="op">==</span><span class="st">"red"</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">rl</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 40</code></pre>
+</div>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># What is the length of x that contains "blue"</span></span>
+<span><span class="va">rb</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="va">x</span><span class="op">==</span><span class="st">"blue"</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">rb</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20</code></pre>
+</div>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># What is the length of x that contains "orange"</span></span>
+<span><span class="va">ro</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="va">x</span><span class="op">==</span><span class="st">"orange"</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">ro</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 60</code></pre>
+</div>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># How many colors do we have?</span></span>
+<span><span class="va">rl</span><span class="op">+</span><span class="va">rb</span><span class="op">+</span><span class="va">ro</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 120</code></pre>
+</div>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># How many colors do we have(easy way)?</span></span>
+<span><span class="va">xl</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span>
+<span><span class="va">xl</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 120</code></pre>
+</div>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># What is the prportion of red compared to the entire dataset</span></span>
+<span><span class="va">rp</span><span class="op">=</span><span class="va">rl</span><span class="op">/</span><span class="va">xl</span> </span>
+<span><span class="va">rp</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3333333</code></pre>
+</div>
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># What is the prportion of blue compared to the entire dataset</span></span>
+<span><span class="va">bp</span><span class="op">=</span><span class="va">rb</span><span class="op">/</span><span class="va">xl</span></span>
+<span><span class="va">bp</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1666667</code></pre>
+</div>
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># What is the prportion of orange compared to the entire dataset</span></span>
+<span><span class="va">op</span><span class="op">=</span><span class="va">ro</span><span class="op">/</span><span class="va">xl</span></span>
+<span><span class="va">op</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Draw a barplot with these different proportions</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html">barplot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">rp</span>,<span class="va">bp</span>,<span class="va">op</span><span class="op">)</span>,</span>
+<span>        col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>,<span class="st">"blue"</span>,<span class="st">"orange"</span><span class="op">)</span>,</span>
+<span>        names.arg<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Red"</span>,<span class="st">"Blue"</span>, <span class="st">"Orange"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Lab-5_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="1152"></p>
+</div>
+</div>
+<section id="rnorm" class="level3"><h3 class="anchored" data-anchor-id="rnorm"><code>rnorm()</code></h3>
+<p>In most, if not all of my slides, you have seen me use the function <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code>. In class, I’ve used this as a way to generate large sets of data with one line of text. There are a few arguments that are necessary in order to take this function and use it for the purposes of sampling.</p>
+<p><code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> stands for “Random Normal”. Essentially, what <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> does it create a random set of numbers (specified by you) and generates data. pulled from a normal distribution.</p>
+<p>Here are the arguments <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> accepts:</p>
+<ul>
+<li><p><code>n</code>: Specifies the number of data points you want to create.</p></li>
+<li><p><code>mean</code>: Specifies the mean you want your sample to have.</p></li>
+<li><p><code>sd</code>: Specifies the standard deviation you want your sample to have.</p></li>
+</ul>
+<p>Although not essential, a nice function to use is <code>round(digits = 0)</code></p>
+<ul>
+<li>This function makes your data look a little bit neater, you will see that when we create a sample from <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> the numbers are a little messy.</li>
+</ul>
+<p>So, let’s make a sample of 20 numbers with a mean of 12 and a standard deviation of 3.</p>
+<div class="cell">
+<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>,<span class="fl">12</span>,<span class="fl">3</span><span class="op">)</span></span>
+<span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 10.493423 12.394593 11.763249 14.660354 12.350914 12.955890 10.254628
+ [8] 14.143598  9.524222 10.920414 12.269658 12.288823 11.395098 14.219521
+[15] 12.370139 11.912050 10.833437 13.532569  9.258557 18.930890</code></pre>
+</div>
+</div>
+<p>See how the numbers came out a little unwieldy? Let’s fix that:</p>
+<div class="cell">
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>,<span class="fl">12</span>,<span class="fl">3</span><span class="op">)</span>,digits<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
+<span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 10.69 14.29 12.79 14.32  9.56 10.68  9.84 12.69  8.53 12.74 11.73 17.27
+[13] 11.59 11.67  9.93 11.33 12.55 13.25 15.20 14.91</code></pre>
+</div>
+</div>
+<p>Notice how the <code>digits=</code> command is preceded by a comma. This is because it is a part of the <code><a href="https://rdrr.io/r/base/Round.html">round()</a></code> function but <em>not</em> a part of the <code><a href="https://rdrr.io/r/stats/Normal.html">rnorm()</a></code> function.</p>
+<p>We can specify the mean and the standard deviation of the dataset, but does introducing the variability of the standard deviation make it harder for the mean to be exactly what we asked for? Let’s see!</p>
+<div class="cell">
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span>,<span class="fl">12</span>,<span class="fl">3</span><span class="op">)</span></span>
+<span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">x</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11.8655</code></pre>
+</div>
+</div>
+</section><section id="sampling" class="level3"><h3 class="anchored" data-anchor-id="sampling">Sampling</h3>
+<p>We can have our dataset of 100 points, but if we take a sample of that data, how representative will it be of the <em>true</em> mean?</p>
+<p>Let’s take a look:</p>
+<div class="cell">
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># For reproduible examples</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">11</span><span class="op">)</span></span>
+<span><span class="co"># Create a sample of 10,000 with a mean of 10 and standard deviation of 10</span></span>
+<span><span class="va">x</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10000</span>,<span class="fl">10</span>,<span class="fl">15</span><span class="op">)</span>,digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Sample 1000</span></span>
+<span><span class="va">s1</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">x</span>,<span class="fl">1000</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Sample 100</span></span>
+<span><span class="va">s2</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">x</span>,<span class="fl">100</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Sample 10</span></span>
+<span><span class="va">s3</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">x</span>,<span class="fl">10</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">s1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10.41259</code></pre>
+</div>
+<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">s2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 11.3497</code></pre>
+</div>
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">s3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12.371</code></pre>
+</div>
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10.17055</code></pre>
+</div>
+</div>
+<p>Do you see how it becomes difficult to tell a certain property of a random sample when you only have small sample to use?</p>
+
+
+<!-- -->
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb72" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Lab 5'</span></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="in">```{r global_options,echo=FALSE}</span></span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.width=</span><span class="dv">12</span>, <span class="at">fig.height=</span><span class="dv">8</span>, <span class="at">comment=</span><span class="cn">NA</span>)</span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;br&gt;</span></span>
+<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a><span class="fu">### Probability</span></span>
+<span id="cb72-13"><a href="#cb72-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-14"><a href="#cb72-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;br&gt;</span></span>
+<span id="cb72-15"><a href="#cb72-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-16"><a href="#cb72-16" aria-hidden="true" tabindex="-1"></a>Before we can talk about inferential satistics we have to understand probability.</span>
+<span id="cb72-17"><a href="#cb72-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-18"><a href="#cb72-18" aria-hidden="true" tabindex="-1"></a>We all know, that if I toss a quarter in the air. There are only two possible options. Either the coin lands on heads, or it lands on tails.</span>
+<span id="cb72-19"><a href="#cb72-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-22"><a href="#cb72-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-23"><a href="#cb72-23" aria-hidden="true" tabindex="-1"></a>coin<span class="ot">=</span><span class="fu">c</span>(<span class="st">"head"</span>,<span class="st">"tails"</span>)</span>
+<span id="cb72-24"><a href="#cb72-24" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(coin,<span class="dv">1</span>)</span>
+<span id="cb72-25"><a href="#cb72-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-26"><a href="#cb72-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-27"><a href="#cb72-27" aria-hidden="true" tabindex="-1"></a>By using the <span class="in">`sample()`</span> function, we can tell R to randomly sample an event for us.</span>
+<span id="cb72-28"><a href="#cb72-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-29"><a href="#cb72-29" aria-hidden="true" tabindex="-1"></a>We 'tossed' a coin, and it landed on heads. What is the probability of this happening?</span>
+<span id="cb72-30"><a href="#cb72-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-31"><a href="#cb72-31" aria-hidden="true" tabindex="-1"></a>Probability is written as:</span>
+<span id="cb72-32"><a href="#cb72-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-33"><a href="#cb72-33" aria-hidden="true" tabindex="-1"></a>$$P(A) = \frac{1}{2} = .5000$$</span>
+<span id="cb72-34"><a href="#cb72-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-35"><a href="#cb72-35" aria-hidden="true" tabindex="-1"></a>In other words, the number of possible outcomes favorable to A divided by the total number of possible outcomes.</span>
+<span id="cb72-36"><a href="#cb72-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-37"><a href="#cb72-37" aria-hidden="true" tabindex="-1"></a>Let's think about this in terms of playing cards:</span>
+<span id="cb72-38"><a href="#cb72-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-39"><a href="#cb72-39" aria-hidden="true" tabindex="-1"></a>In a standard card deck, there are 52 total cards:</span>
+<span id="cb72-40"><a href="#cb72-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-41"><a href="#cb72-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Two Colors: Red and Black</span>
+<span id="cb72-42"><a href="#cb72-42" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Four Suits: Clubs, Hearts, Spades, Diamonds</span>
+<span id="cb72-43"><a href="#cb72-43" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Card Values: 2,3,4,5,6,7,8,9,10,J,Q,K,A</span>
+<span id="cb72-44"><a href="#cb72-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-45"><a href="#cb72-45" aria-hidden="true" tabindex="-1"></a>What is the probability of picking a King of Hearts</span>
+<span id="cb72-46"><a href="#cb72-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-47"><a href="#cb72-47" aria-hidden="true" tabindex="-1"></a>$$P(King of Hearts) = \frac{1}{52}= .0192$$</span>
+<span id="cb72-48"><a href="#cb72-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-49"><a href="#cb72-49" aria-hidden="true" tabindex="-1"></a>What is the probability of picking a 10 of Hearts and a Nine of Hearts with replacement?</span>
+<span id="cb72-50"><a href="#cb72-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-51"><a href="#cb72-51" aria-hidden="true" tabindex="-1"></a>$$P(10 of Hearts) - P(9 of Hearts) \frac{1}{52}X \frac{1}{52} = .01923X .01923 = .00037$$ What is the probability of picking a 10 of Hearts and a Nine of Hearts without replacement?</span>
+<span id="cb72-52"><a href="#cb72-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-55"><a href="#cb72-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-56"><a href="#cb72-56" aria-hidden="true" tabindex="-1"></a>Ten_of_Hearts <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">52</span></span>
+<span id="cb72-57"><a href="#cb72-57" aria-hidden="true" tabindex="-1"></a>Ten_of_Hearts</span>
+<span id="cb72-58"><a href="#cb72-58" aria-hidden="true" tabindex="-1"></a>Nine_of_Hearts <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">52</span></span>
+<span id="cb72-59"><a href="#cb72-59" aria-hidden="true" tabindex="-1"></a>Ten_of_Hearts<span class="sc">*</span>Nine_of_Hearts</span>
+<span id="cb72-60"><a href="#cb72-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-61"><a href="#cb72-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-62"><a href="#cb72-62" aria-hidden="true" tabindex="-1"></a>$$P(10 of Hearts) - P(9 of Hearts) \frac{1}{52}X \frac{1}{51} = .01923X .01961 = .00037$$</span>
+<span id="cb72-63"><a href="#cb72-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-66"><a href="#cb72-66" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-67"><a href="#cb72-67" aria-hidden="true" tabindex="-1"></a>Ten_of_Hearts <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">52</span></span>
+<span id="cb72-68"><a href="#cb72-68" aria-hidden="true" tabindex="-1"></a>Ten_of_Hearts</span>
+<span id="cb72-69"><a href="#cb72-69" aria-hidden="true" tabindex="-1"></a>Nine_of_Hearts <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">51</span></span>
+<span id="cb72-70"><a href="#cb72-70" aria-hidden="true" tabindex="-1"></a>Nine_of_Hearts</span>
+<span id="cb72-71"><a href="#cb72-71" aria-hidden="true" tabindex="-1"></a>Ten_of_Hearts<span class="sc">*</span>Nine_of_Hearts</span>
+<span id="cb72-72"><a href="#cb72-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-73"><a href="#cb72-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-74"><a href="#cb72-74" aria-hidden="true" tabindex="-1"></a>In order to do work with some datasets, we need to know what they are composed of. So far we have many worked with numbers. If we were to look at string data. Also know as, character data, we can use a new command named <span class="in">`which()`</span>. Additionally we can also use a workaround using something new: <span class="in">`==`</span>. A single <span class="in">`=`</span> is an assignment operator.</span>
+<span id="cb72-75"><a href="#cb72-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-78"><a href="#cb72-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-79"><a href="#cb72-79" aria-hidden="true" tabindex="-1"></a>myname <span class="ot">=</span> <span class="st">"David"</span></span>
+<span id="cb72-80"><a href="#cb72-80" aria-hidden="true" tabindex="-1"></a>myname</span>
+<span id="cb72-81"><a href="#cb72-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-82"><a href="#cb72-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-83"><a href="#cb72-83" aria-hidden="true" tabindex="-1"></a>Two <span class="in">`==`</span> represents a comparative operator. In other words, <span class="in">`==`</span> assesses whether one variable is the exact same as another:</span>
+<span id="cb72-84"><a href="#cb72-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-87"><a href="#cb72-87" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-88"><a href="#cb72-88" aria-hidden="true" tabindex="-1"></a><span class="co"># The variable 'myname' is equal to David so this returns TRUE</span></span>
+<span id="cb72-89"><a href="#cb72-89" aria-hidden="true" tabindex="-1"></a>myname <span class="sc">==</span> <span class="st">"David"</span></span>
+<span id="cb72-90"><a href="#cb72-90" aria-hidden="true" tabindex="-1"></a><span class="co"># It is NOT equal to 'Gaby' so it returns false</span></span>
+<span id="cb72-91"><a href="#cb72-91" aria-hidden="true" tabindex="-1"></a>myname <span class="sc">==</span> <span class="st">"Gaby"</span></span>
+<span id="cb72-92"><a href="#cb72-92" aria-hidden="true" tabindex="-1"></a><span class="co"># As an added reference point != negates the comparison operator</span></span>
+<span id="cb72-93"><a href="#cb72-93" aria-hidden="true" tabindex="-1"></a>myname <span class="sc">!=</span> <span class="st">"Gaby"</span></span>
+<span id="cb72-94"><a href="#cb72-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-95"><a href="#cb72-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-96"><a href="#cb72-96" aria-hidden="true" tabindex="-1"></a>There are two different ways we can break-up our data.</span>
+<span id="cb72-97"><a href="#cb72-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-98"><a href="#cb72-98" aria-hidden="true" tabindex="-1"></a>We can use a command such as:</span>
+<span id="cb72-99"><a href="#cb72-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-102"><a href="#cb72-102" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-103"><a href="#cb72-103" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">100</span>)</span>
+<span id="cb72-104"><a href="#cb72-104" aria-hidden="true" tabindex="-1"></a><span class="co"># Create my datset</span></span>
+<span id="cb72-105"><a href="#cb72-105" aria-hidden="true" tabindex="-1"></a>z<span class="ot">=</span><span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">30</span>,<span class="dv">14</span>,<span class="dv">80</span>,<span class="dv">91</span>,<span class="dv">10</span>) </span>
+<span id="cb72-106"><a href="#cb72-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-107"><a href="#cb72-107" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the length of Z when "10" is present.</span></span>
+<span id="cb72-108"><a href="#cb72-108" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">which</span>(z <span class="sc">==</span> <span class="dv">10</span>)) </span>
+<span id="cb72-109"><a href="#cb72-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-110"><a href="#cb72-110" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the length of Z when a score is less than `&lt;`91</span></span>
+<span id="cb72-111"><a href="#cb72-111" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">which</span>(z<span class="sc">&lt;</span><span class="dv">91</span>))</span>
+<span id="cb72-112"><a href="#cb72-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-113"><a href="#cb72-113" aria-hidden="true" tabindex="-1"></a><span class="co"># Return the length of Z when a score is less than `&lt;`</span></span>
+<span id="cb72-114"><a href="#cb72-114" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(<span class="fu">which</span>(z<span class="sc">&gt;</span><span class="dv">91</span>))</span>
+<span id="cb72-115"><a href="#cb72-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-116"><a href="#cb72-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-117"><a href="#cb72-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Proportioning Data</span></span>
+<span id="cb72-118"><a href="#cb72-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-119"><a href="#cb72-119" aria-hidden="true" tabindex="-1"></a>The below code will allow you to take a set of data and see what proportion is accounted for given a certain criteria.</span>
+<span id="cb72-120"><a href="#cb72-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-121"><a href="#cb72-121" aria-hidden="true" tabindex="-1"></a>For example: If I have a data set of 1's and 0's, how can I know how many I have of each. Additionally, how can I tell the proportion of each?</span>
+<span id="cb72-122"><a href="#cb72-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-123"><a href="#cb72-123" aria-hidden="true" tabindex="-1"></a>To do this we need to use the <span class="in">`which()`</span>command as well as how much of the data is made up of 1's and 0's.</span>
+<span id="cb72-124"><a href="#cb72-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-127"><a href="#cb72-127" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-128"><a href="#cb72-128" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the dataset</span></span>
+<span id="cb72-129"><a href="#cb72-129" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
+<span id="cb72-130"><a href="#cb72-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-131"><a href="#cb72-131" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb72-132"><a href="#cb72-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-133"><a href="#cb72-133" aria-hidden="true" tabindex="-1"></a>one <span class="ot">=</span> <span class="fu">length</span>(<span class="fu">which</span>(x<span class="sc">==</span><span class="dv">1</span>))</span>
+<span id="cb72-134"><a href="#cb72-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-135"><a href="#cb72-135" aria-hidden="true" tabindex="-1"></a>one</span>
+<span id="cb72-136"><a href="#cb72-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-137"><a href="#cb72-137" aria-hidden="true" tabindex="-1"></a>zero <span class="ot">=</span> <span class="fu">length</span>(<span class="fu">which</span>(x<span class="sc">==</span><span class="dv">0</span>))</span>
+<span id="cb72-138"><a href="#cb72-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-139"><a href="#cb72-139" aria-hidden="true" tabindex="-1"></a>zero</span>
+<span id="cb72-140"><a href="#cb72-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-141"><a href="#cb72-141" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)</span>
+<span id="cb72-142"><a href="#cb72-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-143"><a href="#cb72-143" aria-hidden="true" tabindex="-1"></a>one <span class="sc">+</span> zero</span>
+<span id="cb72-144"><a href="#cb72-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-145"><a href="#cb72-145" aria-hidden="true" tabindex="-1"></a>one<span class="sc">/</span><span class="fu">length</span>(x)</span>
+<span id="cb72-146"><a href="#cb72-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-147"><a href="#cb72-147" aria-hidden="true" tabindex="-1"></a>zero<span class="sc">/</span><span class="fu">length</span>(x)</span>
+<span id="cb72-148"><a href="#cb72-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-149"><a href="#cb72-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-150"><a href="#cb72-150" aria-hidden="true" tabindex="-1"></a>We can see here that the amount of 1's is quite close to the amount of 0's. Now let us try with a more involved example.</span>
+<span id="cb72-151"><a href="#cb72-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-154"><a href="#cb72-154" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-155"><a href="#cb72-155" aria-hidden="true" tabindex="-1"></a><span class="co"># Make a dataset of differnt colored marbles</span></span>
+<span id="cb72-156"><a href="#cb72-156" aria-hidden="true" tabindex="-1"></a>d<span class="ot">=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"red"</span>, <span class="st">"blue"</span>,<span class="st">"orange"</span>, <span class="st">"orange"</span>,<span class="st">"orange"</span>) </span>
+<span id="cb72-157"><a href="#cb72-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-158"><a href="#cb72-158" aria-hidden="true" tabindex="-1"></a><span class="co"># Repeat this arrangement 20 times</span></span>
+<span id="cb72-159"><a href="#cb72-159" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span> <span class="fu">rep</span>(d,<span class="dv">20</span>) </span>
+<span id="cb72-160"><a href="#cb72-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-161"><a href="#cb72-161" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the length of x that contains "red"</span></span>
+<span id="cb72-162"><a href="#cb72-162" aria-hidden="true" tabindex="-1"></a>rl<span class="ot">=</span><span class="fu">length</span>(x[x<span class="sc">==</span><span class="st">"red"</span>])</span>
+<span id="cb72-163"><a href="#cb72-163" aria-hidden="true" tabindex="-1"></a>rl</span>
+<span id="cb72-164"><a href="#cb72-164" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the length of x that contains "blue"</span></span>
+<span id="cb72-165"><a href="#cb72-165" aria-hidden="true" tabindex="-1"></a>rb<span class="ot">=</span><span class="fu">length</span>(x[x<span class="sc">==</span><span class="st">"blue"</span>])</span>
+<span id="cb72-166"><a href="#cb72-166" aria-hidden="true" tabindex="-1"></a>rb</span>
+<span id="cb72-167"><a href="#cb72-167" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the length of x that contains "orange"</span></span>
+<span id="cb72-168"><a href="#cb72-168" aria-hidden="true" tabindex="-1"></a>ro<span class="ot">=</span><span class="fu">length</span>(x[x<span class="sc">==</span><span class="st">"orange"</span>])</span>
+<span id="cb72-169"><a href="#cb72-169" aria-hidden="true" tabindex="-1"></a>ro</span>
+<span id="cb72-170"><a href="#cb72-170" aria-hidden="true" tabindex="-1"></a><span class="co"># How many colors do we have?</span></span>
+<span id="cb72-171"><a href="#cb72-171" aria-hidden="true" tabindex="-1"></a>rl<span class="sc">+</span>rb<span class="sc">+</span>ro </span>
+<span id="cb72-172"><a href="#cb72-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-173"><a href="#cb72-173" aria-hidden="true" tabindex="-1"></a><span class="co"># How many colors do we have(easy way)?</span></span>
+<span id="cb72-174"><a href="#cb72-174" aria-hidden="true" tabindex="-1"></a>xl<span class="ot">=</span><span class="fu">length</span>(x) </span>
+<span id="cb72-175"><a href="#cb72-175" aria-hidden="true" tabindex="-1"></a>xl</span>
+<span id="cb72-176"><a href="#cb72-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-177"><a href="#cb72-177" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the prportion of red compared to the entire dataset</span></span>
+<span id="cb72-178"><a href="#cb72-178" aria-hidden="true" tabindex="-1"></a>rp<span class="ot">=</span>rl<span class="sc">/</span>xl </span>
+<span id="cb72-179"><a href="#cb72-179" aria-hidden="true" tabindex="-1"></a>rp</span>
+<span id="cb72-180"><a href="#cb72-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-181"><a href="#cb72-181" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the prportion of blue compared to the entire dataset</span></span>
+<span id="cb72-182"><a href="#cb72-182" aria-hidden="true" tabindex="-1"></a>bp<span class="ot">=</span>rb<span class="sc">/</span>xl</span>
+<span id="cb72-183"><a href="#cb72-183" aria-hidden="true" tabindex="-1"></a>bp</span>
+<span id="cb72-184"><a href="#cb72-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-185"><a href="#cb72-185" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the prportion of orange compared to the entire dataset</span></span>
+<span id="cb72-186"><a href="#cb72-186" aria-hidden="true" tabindex="-1"></a>op<span class="ot">=</span>ro<span class="sc">/</span>xl</span>
+<span id="cb72-187"><a href="#cb72-187" aria-hidden="true" tabindex="-1"></a>op</span>
+<span id="cb72-188"><a href="#cb72-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-189"><a href="#cb72-189" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a barplot with these different proportions</span></span>
+<span id="cb72-190"><a href="#cb72-190" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">c</span>(rp,bp,op),</span>
+<span id="cb72-191"><a href="#cb72-191" aria-hidden="true" tabindex="-1"></a>        <span class="at">col=</span><span class="fu">c</span>(<span class="st">"red"</span>,<span class="st">"blue"</span>,<span class="st">"orange"</span>),</span>
+<span id="cb72-192"><a href="#cb72-192" aria-hidden="true" tabindex="-1"></a>        <span class="at">names.arg=</span><span class="fu">c</span>(<span class="st">"Red"</span>,<span class="st">"Blue"</span>, <span class="st">"Orange"</span>))</span>
+<span id="cb72-193"><a href="#cb72-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-194"><a href="#cb72-194" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-195"><a href="#cb72-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-196"><a href="#cb72-196" aria-hidden="true" tabindex="-1"></a><span class="fu">### `rnorm()`</span></span>
+<span id="cb72-197"><a href="#cb72-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-198"><a href="#cb72-198" aria-hidden="true" tabindex="-1"></a>In most, if not all of my slides, you have seen me use the function <span class="in">`rnorm()`</span>. In class, I've used this as a way to generate large sets of data with one line of text. There are a few arguments that are necessary in order to take this function and use it for the purposes of sampling.</span>
+<span id="cb72-199"><a href="#cb72-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-200"><a href="#cb72-200" aria-hidden="true" tabindex="-1"></a><span class="in">`rnorm()`</span> stands for "Random Normal". Essentially, what <span class="in">`rnorm()`</span> does it create a random set of numbers (specified by you) and generates data. pulled from a normal distribution.</span>
+<span id="cb72-201"><a href="#cb72-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-202"><a href="#cb72-202" aria-hidden="true" tabindex="-1"></a>Here are the arguments <span class="in">`rnorm()`</span> accepts:</span>
+<span id="cb72-203"><a href="#cb72-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-204"><a href="#cb72-204" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`n`</span>: Specifies the number of data points you want to create.</span>
+<span id="cb72-205"><a href="#cb72-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-206"><a href="#cb72-206" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`mean`</span>: Specifies the mean you want your sample to have.</span>
+<span id="cb72-207"><a href="#cb72-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-208"><a href="#cb72-208" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`sd`</span>: Specifies the standard deviation you want your sample to have.</span>
+<span id="cb72-209"><a href="#cb72-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-210"><a href="#cb72-210" aria-hidden="true" tabindex="-1"></a>Although not essential, a nice function to use is <span class="in">`round(digits = 0)`</span></span>
+<span id="cb72-211"><a href="#cb72-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-212"><a href="#cb72-212" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>This function makes your data look a little bit neater, you will see that when we create a sample from <span class="in">`rnorm()`</span> the numbers are a little messy.</span>
+<span id="cb72-213"><a href="#cb72-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-214"><a href="#cb72-214" aria-hidden="true" tabindex="-1"></a>So, let's make a sample of 20 numbers with a mean of 12 and a standard deviation of 3.</span>
+<span id="cb72-215"><a href="#cb72-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-218"><a href="#cb72-218" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-219"><a href="#cb72-219" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">12</span>,<span class="dv">3</span>)</span>
+<span id="cb72-220"><a href="#cb72-220" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb72-221"><a href="#cb72-221" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-222"><a href="#cb72-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-223"><a href="#cb72-223" aria-hidden="true" tabindex="-1"></a>See how the numbers came out a little unwieldy? Let's fix that:</span>
+<span id="cb72-224"><a href="#cb72-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-227"><a href="#cb72-227" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-228"><a href="#cb72-228" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span> <span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">12</span>,<span class="dv">3</span>),<span class="at">digits=</span><span class="dv">2</span>)</span>
+<span id="cb72-229"><a href="#cb72-229" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb72-230"><a href="#cb72-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-231"><a href="#cb72-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-232"><a href="#cb72-232" aria-hidden="true" tabindex="-1"></a>Notice how the <span class="in">`digits=`</span> command is preceded by a comma. This is because it is a part of the <span class="in">`round()`</span> function but *not* a part of the <span class="in">`rnorm()`</span> function.</span>
+<span id="cb72-233"><a href="#cb72-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-234"><a href="#cb72-234" aria-hidden="true" tabindex="-1"></a>We can specify the mean and the standard deviation of the dataset, but does introducing the variability of the standard deviation make it harder for the mean to be exactly what we asked for? Let's see!</span>
+<span id="cb72-235"><a href="#cb72-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-238"><a href="#cb72-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-239"><a href="#cb72-239" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">rnorm</span>(<span class="dv">100</span>,<span class="dv">12</span>,<span class="dv">3</span>)</span>
+<span id="cb72-240"><a href="#cb72-240" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">round</span>(x, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb72-241"><a href="#cb72-241" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
+<span id="cb72-242"><a href="#cb72-242" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-243"><a href="#cb72-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-244"><a href="#cb72-244" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sampling</span></span>
+<span id="cb72-245"><a href="#cb72-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-246"><a href="#cb72-246" aria-hidden="true" tabindex="-1"></a>We can have our dataset of 100 points, but if we take a sample of that data, how representative will it be of the *true* mean?</span>
+<span id="cb72-247"><a href="#cb72-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-248"><a href="#cb72-248" aria-hidden="true" tabindex="-1"></a>Let's take a look:</span>
+<span id="cb72-249"><a href="#cb72-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-252"><a href="#cb72-252" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb72-253"><a href="#cb72-253" aria-hidden="true" tabindex="-1"></a><span class="co"># For reproduible examples</span></span>
+<span id="cb72-254"><a href="#cb72-254" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">11</span>)</span>
+<span id="cb72-255"><a href="#cb72-255" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sample of 10,000 with a mean of 10 and standard deviation of 10</span></span>
+<span id="cb72-256"><a href="#cb72-256" aria-hidden="true" tabindex="-1"></a>x<span class="ot">=</span><span class="fu">round</span>(<span class="fu">rnorm</span>(<span class="dv">10000</span>,<span class="dv">10</span>,<span class="dv">15</span>),<span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb72-257"><a href="#cb72-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-258"><a href="#cb72-258" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample 1000</span></span>
+<span id="cb72-259"><a href="#cb72-259" aria-hidden="true" tabindex="-1"></a>s1<span class="ot">=</span><span class="fu">sample</span>(x,<span class="dv">1000</span>)</span>
+<span id="cb72-260"><a href="#cb72-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-261"><a href="#cb72-261" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample 100</span></span>
+<span id="cb72-262"><a href="#cb72-262" aria-hidden="true" tabindex="-1"></a>s2<span class="ot">=</span><span class="fu">sample</span>(x,<span class="dv">100</span>)</span>
+<span id="cb72-263"><a href="#cb72-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-264"><a href="#cb72-264" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample 10</span></span>
+<span id="cb72-265"><a href="#cb72-265" aria-hidden="true" tabindex="-1"></a>s3<span class="ot">=</span><span class="fu">sample</span>(x,<span class="dv">10</span>)</span>
+<span id="cb72-266"><a href="#cb72-266" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(s1)</span>
+<span id="cb72-267"><a href="#cb72-267" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(s2)</span>
+<span id="cb72-268"><a href="#cb72-268" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(s3)</span>
+<span id="cb72-269"><a href="#cb72-269" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span>
+<span id="cb72-270"><a href="#cb72-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb72-271"><a href="#cb72-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-272"><a href="#cb72-272" aria-hidden="true" tabindex="-1"></a>Do you see how it becomes difficult to tell a certain property of a random sample when you only have small sample to use?</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>

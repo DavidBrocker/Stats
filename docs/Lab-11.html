@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>PSYC 3400 - Lab 11</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+</head>
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PSYC 3400</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-1.html">
+ <span class="menu-text">Lab 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-2.html">
+ <span class="menu-text">Lab 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-3.html">
+ <span class="menu-text">Lab 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Review-Sheet.html">
+ <span class="menu-text">Exam 1 Review Sheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-4.html">
+ <span class="menu-text">Lab 4</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-5.html">
+ <span class="menu-text">Lab 5</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-6.html">
+ <span class="menu-text">Lab 6</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-7.html">
+ <span class="menu-text">Lab 7</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Review_Sheet_2.html">
+ <span class="menu-text">Exam 2 Review Sheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-8.html">
+ <span class="menu-text">Lab 8</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-9.html">
+ <span class="menu-text">Lab 9</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-10.html">
+ <span class="menu-text">Lab 10</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Lab-11.html" aria-current="page">
+ <span class="menu-text">Lab 11</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lab-12.html">
+ <span class="menu-text">Lab 12</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Final-Review.html">
+ <span class="menu-text">Final Review Sheet</span></a>
+  </li>  
+</ul>
+<div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#two-factor-between-subject-anova" id="toc-two-factor-between-subject-anova" class="nav-link active" data-scroll-target="#two-factor-between-subject-anova">Two Factor Between Subject ANOVA</a>
+  <ul class="collapse">
+<li><a href="#what-if-we-have-two-ivs" id="toc-what-if-we-have-two-ivs" class="nav-link" data-scroll-target="#what-if-we-have-two-ivs">What if we have two IV’s?</a></li>
+  <li><a href="#visualize-no-interaction" id="toc-visualize-no-interaction" class="nav-link" data-scroll-target="#visualize-no-interaction">Visualize No Interaction</a></li>
+  </ul>
+</li>
+  <li><a href="#two-factor-within-subjects-anova" id="toc-two-factor-within-subjects-anova" class="nav-link" data-scroll-target="#two-factor-within-subjects-anova">Two Factor Within Subjects ANOVA</a></li>
+  <li><a href="#effect-sizes" id="toc-effect-sizes" class="nav-link" data-scroll-target="#effect-sizes">Effect Sizes</a></li>
+  </ul></nav>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Lab 11</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><section id="two-factor-between-subject-anova" class="level2"><h2 class="anchored" data-anchor-id="two-factor-between-subject-anova">Two Factor Between Subject ANOVA</h2>
+<p>Recall the way that the ANOVA is formatted:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create the IV</span></span>
+<span><span class="va">groups</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Control"</span>,<span class="st">"Treatment 1"</span>, <span class="st">"Treatment 2"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create the DV</span></span>
+<span><span class="va">score</span> <span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>,<span class="fl">10</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>,<span class="fl">15</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>,<span class="fl">22</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Combine</span></span>
+<span><span class="va">onefact</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">groups</span>,<span class="va">score</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We have three independent variables, or conditions, <strong>control</strong>, <strong>treatment 1</strong> and <strong>treatment 2</strong>. We have one dependent variable, some idea of “<strong>score</strong>”.</p>
+<p>The ANOVA is analyzed through the use of the <code>aov</code> function. Remember to save the analysis as a model so you can use it later if you need to do any post-hoc tests/unplanned comparisons.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>            Df Sum Sq Mean Sq F value Pr(&gt;F)    
+groups       2 1558.6   779.3   802.7 &lt;2e-16 ***
+Residuals   57   55.3     1.0                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>This produces:</p>
+<ul>
+<li><p>a sum of squares and mean squares for the between subjects factor, <code>groups</code>.</p></li>
+<li><p>It also produces a sum of squares and mean squares for the within subjects factor, also called the residuals, or the error.</p></li>
+<li><p>From this we get one F-value.</p></li>
+</ul>
+<section id="what-if-we-have-two-ivs" class="level3"><h3 class="anchored" data-anchor-id="what-if-we-have-two-ivs">What if we have two IV’s?</h3>
+<p>The current design will not help us too much so we need to move on to another design, the two factor between subjects ANOVA.</p>
+<p>The set-up is mostly the same:</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create sex variable </span></span>
+<span><span class="va">Sex</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Male"</span>,<span class="st">"Female"</span><span class="op">)</span>,each <span class="op">=</span> <span class="fl">30</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">Diet</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Diet 1"</span>, <span class="st">"Diet 2"</span><span class="op">)</span>, <span class="fl">30</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">Count</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">30</span>,<span class="fl">28</span>,<span class="fl">2</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">30</span>,<span class="fl">35</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">twofact.df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">Sex</span>,<span class="va">Diet</span>,<span class="va">Count</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">twofact.df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Sex   Diet    Count
+1    Male Diet 1 27.21052
+2    Male Diet 2 32.84692
+3    Male Diet 1 29.21859
+4    Male Diet 2 21.97352
+5    Male Diet 1 28.89591
+6    Male Diet 2 30.40958
+7    Male Diet 1 27.93257
+8    Male Diet 2 29.97841
+9    Male Diet 1 26.99841
+10   Male Diet 2 28.34294
+11   Male Diet 1 28.84722
+12   Male Diet 2 32.02985
+13   Male Diet 1 30.11101
+14   Male Diet 2 25.47370
+15   Male Diet 1 26.47701
+16   Male Diet 2 26.59372
+17   Male Diet 1 31.19911
+18   Male Diet 2 24.85055
+19   Male Diet 1 26.67166
+20   Male Diet 2 26.10828
+21   Male Diet 1 23.96153
+22   Male Diet 2 27.52581
+23   Male Diet 1 30.43324
+24   Male Diet 2 30.21951
+25   Male Diet 1 24.89281
+26   Male Diet 2 26.58385
+27   Male Diet 1 24.50550
+28   Male Diet 2 28.16369
+29   Male Diet 1 26.89186
+30   Male Diet 2 25.85160
+31 Female Diet 1 37.97109
+32 Female Diet 2 35.06345
+33 Female Diet 1 37.08214
+34 Female Diet 2 36.37917
+35 Female Diet 1 36.44966
+36 Female Diet 2 33.37515
+37 Female Diet 1 37.22250
+38 Female Diet 2 35.95934
+39 Female Diet 1 33.68895
+40 Female Diet 2 37.92897
+41 Female Diet 1 35.34230
+42 Female Diet 2 34.36147
+43 Female Diet 1 33.65918
+44 Female Diet 2 29.95844
+45 Female Diet 1 31.24312
+46 Female Diet 2 37.03697
+47 Female Diet 1 33.39423
+48 Female Diet 2 37.23043
+49 Female Diet 1 35.48737
+50 Female Diet 2 34.82487
+51 Female Diet 1 33.01039
+52 Female Diet 2 34.51271
+53 Female Diet 1 34.42723
+54 Female Diet 2 32.09866
+55 Female Diet 1 36.89583
+56 Female Diet 2 39.32543
+57 Female Diet 1 31.69242
+58 Female Diet 2 36.67778
+59 Female Diet 1 36.30411
+60 Female Diet 2 31.19938</code></pre>
+</div>
+</div>
+<p>We can see that there are two levels of the independent variable <code>Sex</code> and two levels of the independent variable <code>Diet</code> and one dependent variable, <code>count</code>.</p>
+<p>From this we will generate four sums of squares and four mean squares.</p>
+<ul>
+<li><p>Sum of Squares for Factor A</p></li>
+<li><p>Sum of Squares for Factor B</p></li>
+<li><p>Sum of Squares for the <em>interaction</em> between A and B</p></li>
+<li><p>Sum of Squares within, or Error, or residual.</p></li>
+</ul>
+<p>Analyzing the data just uses one more term:</p>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create the model</span></span>
+<span><span class="va">twofact.mod</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">Count</span><span class="op">~</span><span class="va">Sex</span><span class="op">*</span><span class="va">Diet</span>,data <span class="op">=</span> <span class="va">twofact.df</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Calculate summary statistics</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">twofact.mod</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Df Sum Sq Mean Sq F value  Pr(&gt;F)    
+Sex          1  796.5   796.5 131.085 2.7e-16 ***
+Diet         1    0.4     0.4   0.062   0.804    
+Sex:Diet     1    0.0     0.0   0.001   0.973    
+Residuals   56  340.2     6.1                    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>Okay, so we have the anova table, but what do these results look like? From this data, we have three possibilities:</p>
+<ul>
+<li><p>There is a main effect of Sex</p></li>
+<li><p>There is a main effect of Diet</p></li>
+<li><p>There is an <em>interaction</em> on Sex and Diet</p></li>
+</ul>
+<p>In order to plot these relationships we use <code>interaction.plot</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Plot the interaction</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/stats/interaction.plot.html">interaction.plot</a></span><span class="op">(</span><span class="va">twofact.df</span><span class="op">$</span><span class="va">Sex</span>,<span class="va">twofact.df</span><span class="op">$</span><span class="va">Diet</span>, <span class="va">twofact.df</span><span class="op">$</span><span class="va">Count</span>,</span>
+<span>                 type <span class="op">=</span> <span class="st">"o"</span>,</span>
+<span>                 legend <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>                 xlab <span class="op">=</span> <span class="st">"Sex"</span>,</span>
+<span>                 ylab <span class="op">=</span> <span class="st">"Mean of Count"</span>,</span>
+<span>                 trace.label <span class="op">=</span> <span class="st">"Diet Type"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Lab-11_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section><section id="visualize-no-interaction" class="level3"><h3 class="anchored" data-anchor-id="visualize-no-interaction">Visualize No Interaction</h3>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create DV with variable means (15,20,30,40)</span></span>
+<span><span class="va">scored</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">80</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">15</span>,<span class="fl">20</span>,<span class="fl">15</span>,<span class="fl">20</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create IV with two levels</span></span>
+<span><span class="va">iv1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Level 1"</span>,<span class="st">"Level 2"</span><span class="op">)</span>,each<span class="op">=</span><span class="fl">2</span>,<span class="fl">20</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create IV with two levels</span></span>
+<span><span class="va">iv2</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Group 1"</span>,<span class="st">"Group 2"</span><span class="op">)</span>,each<span class="op">=</span><span class="fl">1</span>,<span class="fl">40</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Combine</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">iv1</span>,<span class="va">iv2</span>,<span class="va">scored</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create Model and plot</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">scored</span><span class="op">~</span><span class="va">iv1</span><span class="op">*</span><span class="va">iv2</span>,data <span class="op">=</span> <span class="va">df</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Df Sum Sq Mean Sq F value Pr(&gt;F)    
+iv1          1    0.2     0.2   0.148  0.702    
+iv2          1  469.2   469.2 435.549 &lt;2e-16 ***
+iv1:iv2      1    0.3     0.3   0.311  0.579    
+Residuals   76   81.9     1.1                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/interaction.plot.html">interaction.plot</a></span><span class="op">(</span><span class="va">iv1</span>,<span class="va">iv2</span>,<span class="va">scored</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Lab-11_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section></section><section id="two-factor-within-subjects-anova" class="level2"><h2 class="anchored" data-anchor-id="two-factor-within-subjects-anova">Two Factor Within Subjects ANOVA</h2>
+<p>In a Two Factor Between Subjects ANOVA, a particular participant is only ever in one condition or group or treatment level.</p>
+<p>In a Two Factor Within Subjects ANOVA, a particular participant is in <em>each</em> condition or group or treatment level.</p>
+<p>Setting this data up uses the same principles as we have learned before.</p>
+<p>The one major difference in the set-up of the data is that there is now a variable of the subject itself.</p>
+<p>When we had a between subjects design, each participant was unique, with a within design, each participant experiences every aspect of the experiment so it is reasonable that they may have an effect on the experiment itself.</p>
+<p>Here is a sample dataset:</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># For reproduction</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create subject vector</span></span>
+<span><span class="va">subject</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>,<span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create IV</span></span>
+<span><span class="va">groups</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"pre"</span>,<span class="st">"post"</span>,<span class="st">"post 1"</span>, <span class="st">"post 2"</span><span class="op">)</span>,each <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create DV</span></span>
+<span><span class="va">score</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">40</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">20</span>,<span class="fl">30</span>,<span class="fl">40</span>,<span class="fl">70</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create dataframe</span></span>
+<span><span class="va">within_anova</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">subject</span>,<span class="va">groups</span>,<span class="va">score</span><span class="op">)</span></span>
+<span><span class="va">within_anova</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   subject groups    score
+1        1    pre 18.79293
+2        2    pre 30.27743
+3        3    pre 41.08444
+4        4    pre 67.65430
+5        5    pre 20.42912
+6        6    pre 30.50606
+7        7    pre 39.42526
+8        8    pre 69.45337
+9        9    pre 19.43555
+10      10    pre 29.10996
+11       1   post 39.52281
+12       2   post 69.00161
+13       3   post 19.22375
+14       4   post 30.06446
+15       5   post 40.95949
+16       6   post 69.88971
+17       7   post 19.48899
+18       8   post 29.08880
+19       9   post 39.16283
+20      10   post 72.41584
+21       1 post 1 20.13409
+22       2 post 1 29.50931
+23       3 post 1 39.55945
+24       4 post 1 70.45959
+25       5 post 1 19.30628
+26       6 post 1 28.55180
+27       7 post 1 40.57476
+28       8 post 1 68.97634
+29       9 post 1 19.98486
+30      10 post 1 29.06405
+31       1 post 2 41.10230
+32       2 post 2 69.52441
+33       3 post 2 19.29056
+34       4 post 2 29.49874
+35       5 post 2 38.37091
+36       6 post 2 68.83238
+37       7 post 2 17.81996
+38       8 post 2 28.65901
+39       9 post 2 39.70571
+40      10 post 2 69.53410</code></pre>
+</div>
+</div>
+<p>It would be helpful if we could see the means of each group, and plot those means.</p>
+<p>For this, we will use a new function called <code>tappy</code>. This applies a specified function to whatever variables you provide in the arguments.</p>
+<p>To get the means:</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">within_means</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tapply.html">tapply</a></span><span class="op">(</span><span class="va">within_anova</span><span class="op">$</span><span class="va">score</span>,<span class="va">within_anova</span><span class="op">$</span><span class="va">groups</span>,<span class="va">mean</span><span class="op">)</span></span>
+<span><span class="va">within_means</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    post   post 1   post 2      pre 
+42.88183 36.61205 42.23381 36.61684 </code></pre>
+</div>
+</div>
+<p>To get the standard deviations:</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">within_sd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tapply.html">tapply</a></span><span class="op">(</span><span class="va">within_anova</span><span class="op">$</span><span class="va">score</span>,<span class="va">within_anova</span><span class="op">$</span><span class="va">groups</span>,<span class="va">sd</span><span class="op">)</span></span>
+<span><span class="va">within_sd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    post   post 1   post 2      pre 
+20.47817 18.96593 20.24584 18.49391 </code></pre>
+</div>
+</div>
+<p>For now, it will only be important to use <code>tapply</code> in order to get the means.</p>
+<p>Here is how we will plot the means:</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">within_means</span>,</span>
+<span>     pch<span class="op">=</span><span class="fl">19</span>,</span>
+<span>     xlab <span class="op">=</span> <span class="st">"Treatments"</span>,</span>
+<span>     ylab <span class="op">=</span> <span class="st">"Survey Score"</span>,</span>
+<span>     main <span class="op">=</span> <span class="st">"Means of Survey Score by Treatment"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Lab-11_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Performing the ANOVA requires two new terms: <code>Error</code> and the <code>Subject</code> factor.</p>
+<p>The model that the ANOVA should resemble looks like this:</p>
+<p><code>aov(DV ~ IV+ Error(Subjects))</code></p>
+<p>From here it is important to note that your IV <strong>must</strong> be a factor.</p>
+<ul>
+<li><p>With this in mind, you should run the function <code>levels(Grouping Variable</code>) or <code>factor(Grouping Variable</code>.)</p></li>
+<li><p>If the first function returns <code>NULL</code>, use the second function.</p></li>
+</ul>
+<p>Putting all of this together gives us the following:</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">within_anova.mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">score</span> <span class="op">~</span> <span class="va">groups</span> <span class="op">+</span> <span class="fu">Error</span><span class="op">(</span><span class="va">subject</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">within_anova.mod</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Error: subject
+          Df Sum Sq Mean Sq F value Pr(&gt;F)
+Residuals  1  113.9   113.9               
+
+Error: Within
+          Df Sum Sq Mean Sq F value Pr(&gt;F)
+groups     3    355   118.4   0.303  0.823
+Residuals 35  13665   390.4               </code></pre>
+</div>
+</div>
+<p>When reporting these findings, you will ignore the subject variable and report the F-value for the grouping variable.</p>
+<p>This particular finding should be reported as follows:</p>
+<blockquote class="blockquote">
+<p>The results of a one-factor within subjects ANOVA, <em>F(3,35) = .303, p &gt;.05,</em> revealed that there does not appear to be any effect of treatment on survey score.</p>
+</blockquote>
+</section><section id="effect-sizes" class="level2"><h2 class="anchored" data-anchor-id="effect-sizes">Effect Sizes</h2>
+<p>Most times you will want to report effect sizes for your experiment. Effect sizes help to tell you how much of your effect is <em>due</em> to your manipulation.</p>
+<p>In this example, there does not appear to be an effect at all, but we will compute an effect size anyways.</p>
+<p>We will be using the <span class="math inline">\(\omega^2\)</span> (omega-squared) effect size estimate.</p>
+<p>The formula is as follows:</p>
+<p><span class="math display">\[\omega^2 = \frac{SS_B-(k-1)(MS_W)}{SS_T-MS_W}\]</span></p>
+<p>or</p>
+<p><span class="math display">\[\omega^2 = \frac{SS_{Effect}-(k-1)(MS_{Within})}{SS_{Total}-MS_{Within}}\]</span></p>
+<p>There is no <code>R</code> function that reports <span class="math inline">\(\omega^2\)</span>, so we will do this by hand.</p>
+<p><span class="math inline">\(\omega^2 = \frac{355-(4-1)(390.4)}{14020-390.4}\)</span></p>
+<p><span class="math inline">\(\omega^2 = -.059\)</span></p>
+<p>This effect size is negative because our effect was not significant, but it is still important for you to see how to get these numbers!</p>
+
+
+<!-- -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb20" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> 'Lab 11'</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup, include=FALSE}</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>,<span class="at">comment =</span> <span class="cn">NA</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Two Factor Between Subject ANOVA</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>Recall the way that the ANOVA is formatted:</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the IV</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>groups <span class="ot">=</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Control"</span>,<span class="st">"Treatment 1"</span>, <span class="st">"Treatment 2"</span>), <span class="at">each =</span> <span class="dv">20</span>)</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the DV</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>score <span class="ot">=</span><span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">10</span>),<span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">15</span>),<span class="fu">rnorm</span>(<span class="dv">20</span>,<span class="dv">22</span>))</span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine</span></span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>onefact <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(groups,score)</span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>We have three independent variables, or conditions, **control**, **treatment 1** and **treatment 2**. We have one dependent variable, some idea of "**score**".</span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a>The ANOVA is analyzed through the use of the <span class="in">`aov`</span> function. Remember to save the analysis as a model so you can use it later if you need to do any post-hoc tests/unplanned comparisons.</span>
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r,echo=FALSE}</span></span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to model</span></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>onefact.mod <span class="ot">&lt;-</span> <span class="fu">aov</span>(score<span class="sc">~</span>groups, <span class="at">data=</span>onefact)</span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to model</span></span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(onefact.mod)</span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>This produces:</span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>a sum of squares and mean squares for the between subjects factor, <span class="in">`groups`</span>.</span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>It also produces a sum of squares and mean squares for the within subjects factor, also called the residuals, or the error.</span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>From this we get one F-value.</span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a><span class="fu">### What if we have two IV's?</span></span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a>The current design will not help us too much so we need to move on to another design, the two factor between subjects ANOVA.</span>
+<span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a>The set-up is mostly the same:</span>
+<span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sex variable </span></span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a>Sex <span class="ot">=</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Male"</span>,<span class="st">"Female"</span>),<span class="at">each =</span> <span class="dv">30</span>)</span>
+<span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a>Diet <span class="ot">=</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Diet 1"</span>, <span class="st">"Diet 2"</span>), <span class="dv">30</span>)</span>
+<span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-61"><a href="#cb20-61" aria-hidden="true" tabindex="-1"></a>Count <span class="ot">=</span> <span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">30</span>,<span class="dv">28</span>,<span class="dv">2</span>),<span class="fu">rnorm</span>(<span class="dv">30</span>,<span class="dv">35</span>,<span class="dv">2</span>))</span>
+<span id="cb20-62"><a href="#cb20-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-63"><a href="#cb20-63" aria-hidden="true" tabindex="-1"></a>twofact.df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Sex,Diet,Count)</span>
+<span id="cb20-64"><a href="#cb20-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-65"><a href="#cb20-65" aria-hidden="true" tabindex="-1"></a>twofact.df</span>
+<span id="cb20-66"><a href="#cb20-66" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-67"><a href="#cb20-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a>We can see that there are two levels of the independent variable <span class="in">`Sex`</span> and two levels of the independent variable <span class="in">`Diet`</span> and one dependent variable, <span class="in">`count`</span>.</span>
+<span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a>From this we will generate four sums of squares and four mean squares.</span>
+<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Sum of Squares for Factor A</span>
+<span id="cb20-73"><a href="#cb20-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-74"><a href="#cb20-74" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Sum of Squares for Factor B</span>
+<span id="cb20-75"><a href="#cb20-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-76"><a href="#cb20-76" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Sum of Squares for the *interaction* between A and B</span>
+<span id="cb20-77"><a href="#cb20-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-78"><a href="#cb20-78" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Sum of Squares within, or Error, or residual.</span>
+<span id="cb20-79"><a href="#cb20-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-80"><a href="#cb20-80" aria-hidden="true" tabindex="-1"></a>Analyzing the data just uses one more term:</span>
+<span id="cb20-81"><a href="#cb20-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-84"><a href="#cb20-84" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-85"><a href="#cb20-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the model</span></span>
+<span id="cb20-86"><a href="#cb20-86" aria-hidden="true" tabindex="-1"></a>twofact.mod<span class="ot">&lt;-</span><span class="fu">aov</span>(Count<span class="sc">~</span>Sex<span class="sc">*</span>Diet,<span class="at">data =</span> twofact.df)</span>
+<span id="cb20-87"><a href="#cb20-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-88"><a href="#cb20-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate summary statistics</span></span>
+<span id="cb20-89"><a href="#cb20-89" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(twofact.mod)</span>
+<span id="cb20-90"><a href="#cb20-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-91"><a href="#cb20-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-92"><a href="#cb20-92" aria-hidden="true" tabindex="-1"></a>Okay, so we have the anova table, but what do these results look like? From this data, we have three possibilities:</span>
+<span id="cb20-93"><a href="#cb20-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-94"><a href="#cb20-94" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>There is a main effect of Sex</span>
+<span id="cb20-95"><a href="#cb20-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-96"><a href="#cb20-96" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>There is a main effect of Diet</span>
+<span id="cb20-97"><a href="#cb20-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-98"><a href="#cb20-98" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>There is an *interaction* on Sex and Diet</span>
+<span id="cb20-99"><a href="#cb20-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-100"><a href="#cb20-100" aria-hidden="true" tabindex="-1"></a>In order to plot these relationships we use <span class="in">`interaction.plot`</span>.</span>
+<span id="cb20-101"><a href="#cb20-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-104"><a href="#cb20-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-105"><a href="#cb20-105" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the interaction</span></span>
+<span id="cb20-106"><a href="#cb20-106" aria-hidden="true" tabindex="-1"></a><span class="fu">interaction.plot</span>(twofact.df<span class="sc">$</span>Sex,twofact.df<span class="sc">$</span>Diet, twofact.df<span class="sc">$</span>Count,</span>
+<span id="cb20-107"><a href="#cb20-107" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="st">"o"</span>,</span>
+<span id="cb20-108"><a href="#cb20-108" aria-hidden="true" tabindex="-1"></a>                 <span class="at">legend =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb20-109"><a href="#cb20-109" aria-hidden="true" tabindex="-1"></a>                 <span class="at">xlab =</span> <span class="st">"Sex"</span>,</span>
+<span id="cb20-110"><a href="#cb20-110" aria-hidden="true" tabindex="-1"></a>                 <span class="at">ylab =</span> <span class="st">"Mean of Count"</span>,</span>
+<span id="cb20-111"><a href="#cb20-111" aria-hidden="true" tabindex="-1"></a>                 <span class="at">trace.label =</span> <span class="st">"Diet Type"</span>)</span>
+<span id="cb20-112"><a href="#cb20-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-113"><a href="#cb20-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-114"><a href="#cb20-114" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visualize No Interaction</span></span>
+<span id="cb20-115"><a href="#cb20-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-118"><a href="#cb20-118" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-119"><a href="#cb20-119" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DV with variable means (15,20,30,40)</span></span>
+<span id="cb20-120"><a href="#cb20-120" aria-hidden="true" tabindex="-1"></a>scored<span class="ot">=</span><span class="fu">rnorm</span>(<span class="dv">80</span>,<span class="fu">c</span>(<span class="dv">15</span>,<span class="dv">20</span>,<span class="dv">15</span>,<span class="dv">20</span>))</span>
+<span id="cb20-121"><a href="#cb20-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-122"><a href="#cb20-122" aria-hidden="true" tabindex="-1"></a><span class="co"># Create IV with two levels</span></span>
+<span id="cb20-123"><a href="#cb20-123" aria-hidden="true" tabindex="-1"></a>iv1 <span class="ot">=</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Level 1"</span>,<span class="st">"Level 2"</span>),<span class="at">each=</span><span class="dv">2</span>,<span class="dv">20</span>)</span>
+<span id="cb20-124"><a href="#cb20-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-125"><a href="#cb20-125" aria-hidden="true" tabindex="-1"></a><span class="co"># Create IV with two levels</span></span>
+<span id="cb20-126"><a href="#cb20-126" aria-hidden="true" tabindex="-1"></a>iv2 <span class="ot">=</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Group 1"</span>,<span class="st">"Group 2"</span>),<span class="at">each=</span><span class="dv">1</span>,<span class="dv">40</span>)</span>
+<span id="cb20-127"><a href="#cb20-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-128"><a href="#cb20-128" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine</span></span>
+<span id="cb20-129"><a href="#cb20-129" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(iv1,iv2,scored)</span>
+<span id="cb20-130"><a href="#cb20-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-131"><a href="#cb20-131" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Model and plot</span></span>
+<span id="cb20-132"><a href="#cb20-132" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">aov</span>(scored<span class="sc">~</span>iv1<span class="sc">*</span>iv2,<span class="at">data =</span> df))</span>
+<span id="cb20-133"><a href="#cb20-133" aria-hidden="true" tabindex="-1"></a><span class="fu">interaction.plot</span>(iv1,iv2,scored)</span>
+<span id="cb20-134"><a href="#cb20-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-135"><a href="#cb20-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-136"><a href="#cb20-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## Two Factor Within Subjects ANOVA</span></span>
+<span id="cb20-137"><a href="#cb20-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-138"><a href="#cb20-138" aria-hidden="true" tabindex="-1"></a>In a Two Factor Between Subjects ANOVA, a particular participant is only ever in one condition or group or treatment level.</span>
+<span id="cb20-139"><a href="#cb20-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-140"><a href="#cb20-140" aria-hidden="true" tabindex="-1"></a>In a Two Factor Within Subjects ANOVA, a particular participant is in *each* condition or group or treatment level.</span>
+<span id="cb20-141"><a href="#cb20-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-142"><a href="#cb20-142" aria-hidden="true" tabindex="-1"></a>Setting this data up uses the same principles as we have learned before.</span>
+<span id="cb20-143"><a href="#cb20-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-144"><a href="#cb20-144" aria-hidden="true" tabindex="-1"></a>The one major difference in the set-up of the data is that there is now a variable of the subject itself.</span>
+<span id="cb20-145"><a href="#cb20-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-146"><a href="#cb20-146" aria-hidden="true" tabindex="-1"></a>When we had a between subjects design, each participant was unique, with a within design, each participant experiences every aspect of the experiment so it is reasonable that they may have an effect on the experiment itself.</span>
+<span id="cb20-147"><a href="#cb20-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-148"><a href="#cb20-148" aria-hidden="true" tabindex="-1"></a>Here is a sample dataset:</span>
+<span id="cb20-149"><a href="#cb20-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-152"><a href="#cb20-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-153"><a href="#cb20-153" aria-hidden="true" tabindex="-1"></a><span class="co"># For reproduction</span></span>
+<span id="cb20-154"><a href="#cb20-154" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb20-155"><a href="#cb20-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-156"><a href="#cb20-156" aria-hidden="true" tabindex="-1"></a><span class="co"># Create subject vector</span></span>
+<span id="cb20-157"><a href="#cb20-157" aria-hidden="true" tabindex="-1"></a>subject <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="dv">4</span>)</span>
+<span id="cb20-158"><a href="#cb20-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-159"><a href="#cb20-159" aria-hidden="true" tabindex="-1"></a><span class="co"># Create IV</span></span>
+<span id="cb20-160"><a href="#cb20-160" aria-hidden="true" tabindex="-1"></a>groups <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"pre"</span>,<span class="st">"post"</span>,<span class="st">"post 1"</span>, <span class="st">"post 2"</span>),<span class="at">each =</span> <span class="dv">10</span>)</span>
+<span id="cb20-161"><a href="#cb20-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-162"><a href="#cb20-162" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DV</span></span>
+<span id="cb20-163"><a href="#cb20-163" aria-hidden="true" tabindex="-1"></a>score <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">40</span>,<span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">70</span>))</span>
+<span id="cb20-164"><a href="#cb20-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-165"><a href="#cb20-165" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dataframe</span></span>
+<span id="cb20-166"><a href="#cb20-166" aria-hidden="true" tabindex="-1"></a>within_anova <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(subject,groups,score)</span>
+<span id="cb20-167"><a href="#cb20-167" aria-hidden="true" tabindex="-1"></a>within_anova</span>
+<span id="cb20-168"><a href="#cb20-168" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-169"><a href="#cb20-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-170"><a href="#cb20-170" aria-hidden="true" tabindex="-1"></a>It would be helpful if we could see the means of each group, and plot those means.</span>
+<span id="cb20-171"><a href="#cb20-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-172"><a href="#cb20-172" aria-hidden="true" tabindex="-1"></a>For this, we will use a new function called <span class="in">`tappy`</span>. This applies a specified function to whatever variables you provide in the arguments.</span>
+<span id="cb20-173"><a href="#cb20-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-174"><a href="#cb20-174" aria-hidden="true" tabindex="-1"></a>To get the means:</span>
+<span id="cb20-175"><a href="#cb20-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-178"><a href="#cb20-178" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-179"><a href="#cb20-179" aria-hidden="true" tabindex="-1"></a>within_means <span class="ot">&lt;-</span> <span class="fu">tapply</span>(within_anova<span class="sc">$</span>score,within_anova<span class="sc">$</span>groups,mean)</span>
+<span id="cb20-180"><a href="#cb20-180" aria-hidden="true" tabindex="-1"></a>within_means</span>
+<span id="cb20-181"><a href="#cb20-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-182"><a href="#cb20-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-183"><a href="#cb20-183" aria-hidden="true" tabindex="-1"></a>To get the standard deviations:</span>
+<span id="cb20-184"><a href="#cb20-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-187"><a href="#cb20-187" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-188"><a href="#cb20-188" aria-hidden="true" tabindex="-1"></a>within_sd <span class="ot">&lt;-</span> <span class="fu">tapply</span>(within_anova<span class="sc">$</span>score,within_anova<span class="sc">$</span>groups,sd)</span>
+<span id="cb20-189"><a href="#cb20-189" aria-hidden="true" tabindex="-1"></a>within_sd</span>
+<span id="cb20-190"><a href="#cb20-190" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-191"><a href="#cb20-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-192"><a href="#cb20-192" aria-hidden="true" tabindex="-1"></a>For now, it will only be important to use <span class="in">`tapply`</span> in order to get the means.</span>
+<span id="cb20-193"><a href="#cb20-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-194"><a href="#cb20-194" aria-hidden="true" tabindex="-1"></a>Here is how we will plot the means:</span>
+<span id="cb20-195"><a href="#cb20-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-198"><a href="#cb20-198" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-199"><a href="#cb20-199" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(within_means,</span>
+<span id="cb20-200"><a href="#cb20-200" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch=</span><span class="dv">19</span>,</span>
+<span id="cb20-201"><a href="#cb20-201" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Treatments"</span>,</span>
+<span id="cb20-202"><a href="#cb20-202" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Survey Score"</span>,</span>
+<span id="cb20-203"><a href="#cb20-203" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Means of Survey Score by Treatment"</span>)</span>
+<span id="cb20-204"><a href="#cb20-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-205"><a href="#cb20-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-206"><a href="#cb20-206" aria-hidden="true" tabindex="-1"></a>Performing the ANOVA requires two new terms: <span class="in">`Error`</span> and the <span class="in">`Subject`</span> factor.</span>
+<span id="cb20-207"><a href="#cb20-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-208"><a href="#cb20-208" aria-hidden="true" tabindex="-1"></a>The model that the ANOVA should resemble looks like this:</span>
+<span id="cb20-209"><a href="#cb20-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-210"><a href="#cb20-210" aria-hidden="true" tabindex="-1"></a><span class="in">`aov(DV ~ IV+ Error(Subjects))`</span></span>
+<span id="cb20-211"><a href="#cb20-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-212"><a href="#cb20-212" aria-hidden="true" tabindex="-1"></a>From here it is important to note that your IV **must** be a factor.</span>
+<span id="cb20-213"><a href="#cb20-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-214"><a href="#cb20-214" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>With this in mind, you should run the function <span class="in">`levels(Grouping Variable`</span>) or <span class="in">`factor(Grouping Variable`</span>.)</span>
+<span id="cb20-215"><a href="#cb20-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-216"><a href="#cb20-216" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>If the first function returns <span class="in">`NULL`</span>, use the second function.</span>
+<span id="cb20-217"><a href="#cb20-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-218"><a href="#cb20-218" aria-hidden="true" tabindex="-1"></a>Putting all of this together gives us the following:</span>
+<span id="cb20-219"><a href="#cb20-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-222"><a href="#cb20-222" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>within_anova.mod <span class="ot">&lt;-</span> <span class="fu">aov</span>(score <span class="sc">~</span> groups <span class="sc">+</span> <span class="fu">Error</span>(subject))</span>
+<span id="cb20-224"><a href="#cb20-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-225"><a href="#cb20-225" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(within_anova.mod)</span>
+<span id="cb20-226"><a href="#cb20-226" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-227"><a href="#cb20-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-228"><a href="#cb20-228" aria-hidden="true" tabindex="-1"></a>When reporting these findings, you will ignore the subject variable and report the F-value for the grouping variable.</span>
+<span id="cb20-229"><a href="#cb20-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-230"><a href="#cb20-230" aria-hidden="true" tabindex="-1"></a>This particular finding should be reported as follows:</span>
+<span id="cb20-231"><a href="#cb20-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-232"><a href="#cb20-232" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The results of a one-factor within subjects ANOVA, *F(3,35) = .303, p \&gt;.05,* revealed that there does not appear to be any effect of treatment on survey score.</span></span>
+<span id="cb20-233"><a href="#cb20-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-234"><a href="#cb20-234" aria-hidden="true" tabindex="-1"></a><span class="fu">## Effect Sizes</span></span>
+<span id="cb20-235"><a href="#cb20-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-236"><a href="#cb20-236" aria-hidden="true" tabindex="-1"></a>Most times you will want to report effect sizes for your experiment. Effect sizes help to tell you how much of your effect is *due* to your manipulation.</span>
+<span id="cb20-237"><a href="#cb20-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-238"><a href="#cb20-238" aria-hidden="true" tabindex="-1"></a>In this example, there does not appear to be an effect at all, but we will compute an effect size anyways.</span>
+<span id="cb20-239"><a href="#cb20-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-240"><a href="#cb20-240" aria-hidden="true" tabindex="-1"></a>We will be using the $\omega^2$ (omega-squared) effect size estimate.</span>
+<span id="cb20-241"><a href="#cb20-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-242"><a href="#cb20-242" aria-hidden="true" tabindex="-1"></a>The formula is as follows:</span>
+<span id="cb20-243"><a href="#cb20-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-244"><a href="#cb20-244" aria-hidden="true" tabindex="-1"></a>$$\omega^2 = \frac{SS_B-(k-1)(MS_W)}{SS_T-MS_W}$$</span>
+<span id="cb20-245"><a href="#cb20-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-246"><a href="#cb20-246" aria-hidden="true" tabindex="-1"></a>or</span>
+<span id="cb20-247"><a href="#cb20-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-248"><a href="#cb20-248" aria-hidden="true" tabindex="-1"></a>$$\omega^2 = \frac{SS_{Effect}-(k-1)(MS_{Within})}{SS_{Total}-MS_{Within}}$$</span>
+<span id="cb20-249"><a href="#cb20-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-250"><a href="#cb20-250" aria-hidden="true" tabindex="-1"></a>There is no <span class="in">`R`</span> function that reports $\omega^2$, so we will do this by hand.</span>
+<span id="cb20-251"><a href="#cb20-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-252"><a href="#cb20-252" aria-hidden="true" tabindex="-1"></a>$\omega^2 = \frac{355-(4-1)(390.4)}{14020-390.4}$</span>
+<span id="cb20-253"><a href="#cb20-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-254"><a href="#cb20-254" aria-hidden="true" tabindex="-1"></a>$\omega^2 = -.059$</span>
+<span id="cb20-255"><a href="#cb20-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-256"><a href="#cb20-256" aria-hidden="true" tabindex="-1"></a>This effect size is negative because our effect was not significant, but it is still important for you to see how to get these numbers!</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>
