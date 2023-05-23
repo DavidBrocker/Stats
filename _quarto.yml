@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: docs
+
+website: 
+  title: "PSYC 3400"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - Lab-1.qmd
+      - Lab-2.qmd
+      - Lab-3.qmd
+      - Review-Sheet.qmd
+      - Lab-4.qmd
+      - Lab-5.qmd
+      - Lab-6.qmd
+      - Lab-7.qmd
+      - Review_Sheet_2.qmd
+      - Lab-8.qmd
+      - Lab-9.qmd
+      - Lab-10.qmd
+      - Lab-11.qmd 
+      - Lab-12.qmd 
+      - Final-Review.qmd
+    
+
+format:
+  html:
+    theme: 
+        light: flatly
+        dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    code-fold: false
+    code-link: true
+    code-tools: true
+
+
+editor: visual
